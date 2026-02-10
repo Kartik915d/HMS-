@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ---------- LOGIN ---------- */
+.login-body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 40px;
+    width: 320px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.login-card h2 {
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+/* ---------- DASHBOARD BACKGROUND ---------- */
+.dashboard-body {
+    min-height: 100vh;
+    background: linear-gradient(
+        180deg,
+        #e8f1ff 0%,
+        #f5f9ff 40%,
+        #ffffff 100%
+    );
+}
+
+/* ---------- TOP BAR ---------- */
+.top-bar {
+    height: 70px;
+    background: linear-gradient(90deg, #0f172a, #020617);
+    color: white;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* ---------- CENTER DASHBOARD ---------- */
+.dashboard-center {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* EXACTLY 5 PER ROW */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(5, 220px);
+    gap: 30px;
+}
+
+/* ---------- MENU CARDS ---------- */
+.menu-card {
+    background: #ffffff;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 17px;
+    font-weight: 600;
+    color: #0f172a;
+
+    border-radius: 14px;
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.08),
+        0 2px 6px rgba(15, 23, 42, 0.04);
+
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 35px rgba(37, 99, 235, 0.25);
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+}
+
+
+
+/* ---------- PLACEHOLDER PAGE ---------- */
+.placeholder-body {
+    height: 100vh;
+    background: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ---------- OPERATIONS PAGE ---------- */
+.operations-body {
+    min-height: 100vh;
+    background: linear-gradient(
+        180deg,
+        #6993d5 0%,
+        #446ba7 50%,
+        #617eac 100%
+    );
+}
+
+/* Center area */
+.operations-center {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* 5 buttons per row */
+.operations-container {
+    display: grid;
+    grid-template-columns: repeat(5, 230px);
+    gap: 26px;
+}
+
+/* Operation cards */
+.op-card {
+    background: rgba(255, 255, 255, 0.95);
+    color: #0b1d3a;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    border-radius: 14px;
+    text-decoration: none;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.op-card:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #ffffff;
+    box-shadow:
+        0 20px 40px rgba(144, 167, 216, 0.45);
+}
+
+/* Back link */
+.back-link {
+    color: #c7d2fe;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== MARINE DASHBOARD UI ===== */
+
+.marine-body {
+    background: linear-gradient(180deg, #eef4ff, #f8fbff);
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Header */
+.marine-header {
+    height: 70px;
+    background: linear-gradient(90deg, #0f172a, #020617);
+    color: white;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-actions button,
+.header-actions a {
+    margin-left: 10px;
+}
+
+/* Buttons */
+.btn-yellow {
+    background: #facc15;
+    border: none;
+    padding: 8px 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-red {
+    background: #ef4444;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-blue {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Filter Card */
+.filter-card {
+    margin: 25px 40px;
+    background: white;
+    border-radius: 14px;
+    padding: 20px 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #334155;
+}
+
+.filter-group input,
+.filter-group select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+.align-end {
+    justify-content: flex-end;
+}
+
+/* Tabs */
+.modern-tabs {
+    margin: 0 40px;
+    display: flex;
+    gap: 10px;
+}
+
+.tab {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background: #e2e8f0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: #1e293b;
+    color: white;
+}
+
+/* Table Card */
+.table-card {
+    margin: 25px 40px;
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead {
+    background: #1e293b;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: #f1f5f9;
+}
+
+/* Hide */
+.hidden {
+    display: none;
+}
+
+/* Table Inputs */
+.remark-input {
+    width: 140px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-size: 13px;
+}
+
+/* Icon Buttons */
+.icon-btn {
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Colors */
+.icon-btn.blue {
+    background: #2563eb;
+}
+
+.icon-btn.edit {
+    background: #3b82f6;
+}
+
+.icon-btn.green {
+    background: #22c55e;
+}
+
+/* Hover */
+.icon-btn:hover {
+    opacity: 0.85;
+}

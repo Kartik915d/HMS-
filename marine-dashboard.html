@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marine Operation Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="marine-body">
+
+<header class="marine-header">
+    <h2>Marine Operation Dashboard</h2>
+    <div class="header-actions">
+        <button class="btn-yellow">+ Add Vessel Shift</button>
+        <a href="operations.html" class="btn-red">✖ Exit</a>
+    </div>
+</header>
+
+<section class="filter-card">
+    <div class="filter-grid">
+        <div class="filter-group">
+            <label>Type</label>
+            <select>
+                <option>1 Shift</option>
+                <option>2 Shift</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>From Date</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="filter-group">
+            <label>To Date</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="filter-group">
+            <label>VCN</label>
+            <input type="text" placeholder="Enter VCN">
+        </div>
+
+        <div class="filter-group align-end">
+            <button class="btn-blue" onclick="showTable()">Display</button>
+        </div>
+    </div>
+</section>
+
+<div class="tabs modern-tabs">
+    <button class="tab active">Arrival</button>
+    <button class="tab">Departure</button>
+    <button class="tab">Shift</button>
+    <button class="tab">Real Time Port Dashboard</button>
+</div>
+
+<section id="tableSection" class="table-card hidden">
+    <table>
+        <thead>
+    <tr>
+        <th>S/L</th>
+        <th>Vessel Name</th>
+        <th>VCN No</th>
+        <th>LOA</th>
+        <th>Type</th>
+        <th>ETA</th>
+        <th>Draft</th>
+        <th>Berth</th>
+        <th>Pilot</th>
+        <th>Tug 1</th>
+        <th>Tug 2</th>
+        <th>Tug 3</th>
+
+        <!-- NEW COLUMNS -->
+        <th>More</th>
+        <th>Mooring Supervisor</th>
+        <th>Gang Size</th>
+        <th>VHF Channels</th>
+        <th>Mobile</th>
+        <th>Remarks</th>
+        <th>Edit</th>
+        <th>Close</th>
+    </tr>
+</thead>
+
+<tbody>
+    <tr>
+        <td>1</td>
+        <td>EVA BERGEN</td>
+        <td>R7441</td>
+        <td>145.53</td>
+        <td>LQ</td>
+        <td>10/02/2026 09:05</td>
+        <td>9.7</td>
+        <td>NSD03</td>
+        <td>JP-83 Rajesh Khanna</td>
+        <td>Pacific I</td>
+        <td>Mogra Star</td>
+        <td>Ocean Freedom</td>
+
+        <!-- NEW DATA -->
+        <td><button class="icon-btn blue">👁</button></td>
+        <td></td>
+        <td>0</td>
+        <td></td>
+        <td>8830703466</td>
+        <td><input class="remark-input" type="text"></td>
+        <td><button class="icon-btn edit">✎</button></td>
+        <td><button class="icon-btn green">✔</button></td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>SWARNA MALA</td>
+        <td>R7436</td>
+        <td>183</td>
+        <td>BULK</td>
+        <td>10/02/2026 10:00</td>
+        <td>13.13</td>
+        <td>BM03</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+
+        <td><button class="icon-btn blue">👁</button></td>
+        <td></td>
+        <td>0</td>
+        <td></td>
+        <td></td>
+        <td><input class="remark-input" type="text"></td>
+        <td><button class="icon-btn edit">✎</button></td>
+        <td><button class="icon-btn green">✔</button></td>
+    </tr>
+</tbody>
+
+    </table>
+</section>
+
+<script>
+function showTable() {
+    document.getElementById("tableSection").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
