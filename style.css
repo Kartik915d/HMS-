@@ -1,3 +1,6 @@
+/* =====================================================
+   GLOBAL RESET
+   ===================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +8,9 @@
     font-family: "Segoe UI", sans-serif;
 }
 
-/* ---------- LOGIN ---------- */
+/* =====================================================
+   LOGIN PAGE
+   ===================================================== */
 .login-body {
     height: 100vh;
     background: linear-gradient(135deg, #0f172a, #1e293b);
@@ -18,7 +23,7 @@
     background: #ffffff;
     padding: 40px;
     width: 320px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
     box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
@@ -51,18 +56,20 @@
     background: #1d4ed8;
 }
 
-/* ---------- DASHBOARD BACKGROUND ---------- */
+/* =====================================================
+   DASHBOARD (LIGHT – OVERVIEW)
+   ===================================================== */
 .dashboard-body {
     min-height: 100vh;
     background: linear-gradient(
         180deg,
-        #e8f1ff 0%,
-        #f5f9ff 40%,
+        #f2f7ff 0%,
+        #eaf1ff 40%,
         #ffffff 100%
     );
 }
 
-/* ---------- TOP BAR ---------- */
+/* Top Bar */
 .top-bar {
     height: 70px;
     background: linear-gradient(90deg, #0f172a, #020617);
@@ -73,9 +80,10 @@
     align-items: center;
     font-weight: 600;
     letter-spacing: 0.3px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
 }
 
-/* ---------- CENTER DASHBOARD ---------- */
+/* Center Area */
 .dashboard-center {
     min-height: calc(100vh - 70px);
     display: flex;
@@ -84,17 +92,17 @@
     padding: 40px 20px;
 }
 
-/* EXACTLY 5 PER ROW */
+/* Grid */
 .menu-container {
     display: grid;
     grid-template-columns: repeat(5, 220px);
     gap: 30px;
 }
 
-/* ---------- MENU CARDS ---------- */
+/* Cards */
 .menu-card {
     background: #ffffff;
-    height: 90px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,28 +112,26 @@
     font-weight: 600;
     color: #0f172a;
 
-    border-radius: 14px;
+    border-radius: 16px;
     text-decoration: none;
 
     box-shadow:
         0 10px 25px rgba(15, 23, 42, 0.08),
         0 2px 6px rgba(15, 23, 42, 0.04);
 
-    transition: all 0.3s ease;
+    transition: all 0.35s ease;
 }
 
-/* Hover effect */
 .menu-card:hover {
-    transform: translateY(-8px);
-    box-shadow:
-        0 20px 35px rgba(37, 99, 235, 0.25);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(37, 99, 235, 0.35);
     background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: #ffffff;
+    color: white;
 }
 
-
-
-/* ---------- PLACEHOLDER PAGE ---------- */
+/* =====================================================
+   PLACEHOLDER PAGE
+   ===================================================== */
 .placeholder-body {
     height: 100vh;
     background: #f1f5f9;
@@ -137,23 +143,24 @@
 .placeholder-card {
     background: white;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* ---------- OPERATIONS PAGE ---------- */
+/* =====================================================
+   OPERATIONS PAGE (MEDIUM DEPTH)
+   ===================================================== */
 .operations-body {
     min-height: 100vh;
     background: linear-gradient(
         180deg,
-        #6993d5 0%,
-        #446ba7 50%,
-        #617eac 100%
+        #6b8fd6 0%,
+        #4b6fb4 45%,
+        #3b5c99 100%
     );
 }
 
-/* Center area */
 .operations-center {
     min-height: calc(100vh - 70px);
     display: flex;
@@ -162,16 +169,14 @@
     padding: 40px 20px;
 }
 
-/* 5 buttons per row */
 .operations-container {
     display: grid;
     grid-template-columns: repeat(5, 230px);
     gap: 26px;
 }
 
-/* Operation cards */
 .op-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.96);
     color: #0b1d3a;
     height: 90px;
 
@@ -182,43 +187,38 @@
 
     font-size: 15px;
     font-weight: 600;
-    line-height: 1.3;
 
     border-radius: 14px;
     text-decoration: none;
 
-    box-shadow:
-        0 12px 28px rgba(0, 0, 0, 0.25);
-
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
     transition: all 0.3s ease;
 }
 
-/* Hover effect */
 .op-card:hover {
     transform: translateY(-6px);
     background: linear-gradient(135deg, #2563eb, #1e40af);
-    color: #ffffff;
-    box-shadow:
-        0 20px 40px rgba(144, 167, 216, 0.45);
+    color: white;
+    box-shadow: 0 20px 40px rgba(144, 167, 216, 0.45);
 }
 
-/* Back link */
 .back-link {
     color: #c7d2fe;
     text-decoration: none;
     font-weight: 500;
 }
 
-.back-link:hover {
-    text-decoration: underline;
-}
-
-/* ===== MARINE DASHBOARD UI ===== */
-
+/* =====================================================
+   MARINE DASHBOARD (DEEPEST LEVEL)
+   ===================================================== */
 .marine-body {
-    background: linear-gradient(180deg, #eef4ff, #f8fbff);
     min-height: 100vh;
-    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(
+        180deg,
+        #0b1d3a 0%,
+        #102a52 50%,
+        #0a1830 100%
+    );
 }
 
 /* Header */
@@ -230,11 +230,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header-actions button,
-.header-actions a {
-    margin-left: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 /* Buttons */
@@ -268,10 +264,10 @@
 /* Filter Card */
 .filter-card {
     margin: 25px 40px;
-    background: white;
+    background: rgba(255,255,255,0.97);
     border-radius: 14px;
     padding: 20px 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 .filter-grid {
@@ -292,10 +288,6 @@
     padding: 8px;
     border-radius: 6px;
     border: 1px solid #cbd5e1;
-}
-
-.align-end {
-    justify-content: flex-end;
 }
 
 /* Tabs */
@@ -319,13 +311,13 @@
     color: white;
 }
 
-/* Table Card */
+/* Table */
 .table-card {
     margin: 25px 40px;
-    background: white;
+    background: rgba(255,255,255,0.97);
     border-radius: 14px;
     padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     overflow-x: auto;
 }
 
@@ -350,45 +342,32 @@ tbody tr:hover {
     background: #f1f5f9;
 }
 
-/* Hide */
-.hidden {
-    display: none;
-}
-
-/* Table Inputs */
+/* Inputs & Icons */
 .remark-input {
     width: 140px;
     padding: 6px;
     border-radius: 6px;
     border: 1px solid #cbd5e1;
-    font-size: 13px;
 }
 
-/* Icon Buttons */
 .icon-btn {
     border: none;
     width: 32px;
     height: 32px;
     border-radius: 6px;
-    font-size: 15px;
     cursor: pointer;
     color: white;
 }
 
-/* Colors */
-.icon-btn.blue {
-    background: #2563eb;
-}
+.icon-btn.blue { background: #2563eb; }
+.icon-btn.edit { background: #3b82f6; }
+.icon-btn.green { background: #22c55e; }
 
-.icon-btn.edit {
-    background: #3b82f6;
-}
-
-.icon-btn.green {
-    background: #22c55e;
-}
-
-/* Hover */
 .icon-btn:hover {
     opacity: 0.85;
+}
+
+/* Utility */
+.hidden {
+    display: none;
 }
