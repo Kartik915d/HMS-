@@ -67,13 +67,13 @@
         #eaf1ff 40%,
         #ffffff 100%
     );
-}
+}   
 
 /* Top Bar */
 .top-bar {
     height: 70px;
-    background: linear-gradient(90deg, #1d2b4b);
-    color: white;
+    background: linear-gradient(90deg, #ffffff);
+    color: rgb(0, 0, 0);
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
@@ -125,7 +125,7 @@
 .menu-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 25px 45px rgba(37, 99, 235, 0.35);
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    background: linear-gradient(135deg,#a1b4e8);
     color: white;
 }
 
@@ -203,7 +203,7 @@
 }
 
 .back-link {
-    color: #c7d2fe;
+    color: #060606;
     text-decoration: none;
     font-weight: 500;
 }
@@ -397,3 +397,54 @@ tbody tr:hover {
     font-size: 14px;
     opacity: 0.9;
 }
+/* =====================================================
+   ICON STYLE DASHBOARD CARDS (LIKE IMAGE)
+   ===================================================== */
+
+.icon-card {
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px;
+    height: 120px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.icon {
+    font-size: 40px;
+}
+
+/* Text */
+.card-text {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* Icon Colors */
+.icon.blue   { color: #2563eb; }
+.icon.gray   { color: #64748b; }
+.icon.indigo { color: #4f46e5; }
+.icon.green  { color: #16a34a; }
+.icon.red    { color: #dc2626; }
+.icon.orange { color: #ea580c; }
+.icon.cyan   { color: #0891b2; }
+.icon.amber  { color: #d97706; }
+.icon.purple { color: #7c3aed; }
+.icon.pink   { color: #db2777; }
+
+/* Hover polish */
+.icon-card:hover {
+    transform: translateY(-6px);
+    border-color: #c7d2fe;
+}
+
+.icon-card:hover .icon,
+.icon-card:hover .card-text {
+    color: #2563eb;
+}
+
+.icon-card .material-symbols-outlined {
+    font-size: 50px;
+}
+
