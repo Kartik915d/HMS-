@@ -72,7 +72,7 @@
 /* Top Bar */
 .top-bar {
     height: 70px;
-    background: linear-gradient(90deg, #0f172a, #020617);
+    background: linear-gradient(90deg, #1d2b4b);
     color: white;
     padding: 0 40px;
     display: flex;
