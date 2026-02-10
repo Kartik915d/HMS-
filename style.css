@@ -371,3 +371,29 @@ tbody tr:hover {
 .hidden {
     display: none;
 }
+
+/* =====================================================
+   NAVBAR LOGO STYLING
+   ===================================================== */
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo {
+    height: 42px;
+    width: auto;
+}
+
+.nav-left h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.nav-right {
+    font-size: 14px;
+    opacity: 0.9;
+}
