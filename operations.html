@@ -3,16 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>HMS | Operations</title>
+
+<!-- Page Styling -->
 <link rel="stylesheet" href="style2.css">
+
+<!-- Global Header Styling -->
+<link rel="stylesheet" href="header.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
-<body class="masters-body">
+<body class="masters-body" data-page="inner">
 
-<header class="top-bar">
-    <h2>Operations</h2>
-    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
-</header>
+<!-- GLOBAL HEADER -->
+<div id="header-placeholder"></div>
 
 <main class="masters-wrapper">
 
@@ -24,10 +28,25 @@
 <div class="section-header"><h3>Vessel & Visit</h3></div>
 <div class="masters-grid">
 
-<a href="#" class="master-card"><span class="material-symbols-outlined icon blue">directions_boat</span><div><h4>Vessel Profile</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon green">anchor</span><div><h4>Vessel Visit</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon purple">lock</span><div><h4>Vessel Closure Operation</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon orange">oil_barrel</span><div><h4>Sludge Oil Removal</h4></div></a>
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon blue">directions_boat</span>
+<div><h4>Vessel Profile</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon green">anchor</span>
+<div><h4>Vessel Visit</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon purple">lock</span>
+<div><h4>Vessel Closure Operation</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon orange">oil_barrel</span>
+<div><h4>Sludge Oil Removal</h4></div>
+</a>
 
 </div>
 </section>
@@ -37,10 +56,25 @@
 <div class="section-header"><h3>Allocation & Control</h3></div>
 <div class="masters-grid">
 
-<a href="#" class="master-card"><span class="material-symbols-outlined icon cyan">account_tree</span><div><h4>VCN Allocation</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon cyan">place</span><div><h4>Berth Allotment</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon purple">block</span><div><h4>Resource Unavailability</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon green">verified</span><div><h4>Port Control Approval</h4></div></a>
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon cyan">account_tree</span>
+<div><h4>VCN Allocation</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon cyan">place</span>
+<div><h4>Berth Allotment</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon purple">block</span>
+<div><h4>Resource Unavailability</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon green">verified</span>
+<div><h4>Port Control Approval</h4></div>
+</a>
 
 </div>
 </section>
@@ -50,11 +84,30 @@
 <div class="section-header"><h3>Approvals</h3></div>
 <div class="masters-grid">
 
-<a href="#" class="master-card"><span class="material-symbols-outlined icon cyan">gavel</span><div><h4>Marine Approval</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon blue">check_circle</span><div><h4>Marine Approval for Berthing</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon amber">payments</span><div><h4>Finance Approval for Berthing</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon amber">account_balance</span><div><h4>Finance Approval For VCN</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon green">person_add</span><div><h4>Customer Registration Approval</h4></div></a>
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon cyan">gavel</span>
+<div><h4>Marine Approval</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon blue">check_circle</span>
+<div><h4>Marine Approval for Berthing</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon amber">payments</span>
+<div><h4>Finance Approval for Berthing</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon amber">account_balance</span>
+<div><h4>Finance Approval For VCN</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon green">person_add</span>
+<div><h4>Customer Registration Approval</h4></div>
+</a>
 
 </div>
 </section>
@@ -64,8 +117,33 @@
 <div class="section-header"><h3>Dashboards & Reports</h3></div>
 <div class="masters-grid">
 
-<a href="marine-dashboard.html" class="master-card"><span class="material-symbols-outlined icon blue">dashboard</span><div><h4>Marine Operation Dashboard</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon indigo">monitoring</span><div><h4>Marine Operation Dashboard - IMI</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon purple">article</span><div><h4>Control Log Report</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon orange">approval</span><div><h4>BPCL Approval Process Screen</h4></div></a>
-<a href="#" class="master-card"><span
+<a href="marine-dashboard.html" class="master-card">
+<span class="material-symbols-outlined icon blue">dashboard</span>
+<div><h4>Marine Operation Dashboard</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon indigo">monitoring</span>
+<div><h4>Marine Operation Dashboard - IMI</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon purple">article</span>
+<div><h4>Control Log Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon orange">approval</span>
+<div><h4>BPCL Approval Process Screen</h4></div>
+</a>
+
+</div>
+</section>
+
+</main>
+
+<!-- LOAD GLOBAL HEADER SCRIPT -->
+<script src="header.js"></script>
+
+</body>
+</html>
