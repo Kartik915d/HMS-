@@ -448,3 +448,198 @@ tbody tr:hover {
     font-size: 50px;
 }
 
+/* =====================================================
+   DATE + TIME FIELD (Marine Dashboard Support)
+   ===================================================== */
+
+.field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #334155;
+}
+
+.field label {
+    min-width: 110px;
+}
+
+.field input,
+.field select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+/* Position clock icon inside field */
+.datetime {
+    position: relative;
+}
+
+.clock-btn {
+    cursor: pointer;
+    margin-left: -30px;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   CLOCK MODAL (Exact Working Version)
+   ===================================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-box {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 10px;
+    width: min(92%, 320px);
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* =====================================================
+   CLOCK DESIGN
+   ===================================================== */
+
+:root {
+    --primary: #2563eb;
+    --clock-size: clamp(180px, 40vw, 240px);
+}
+
+.clock {
+    width: var(--clock-size);
+    height: var(--clock-size);
+    border: 8px solid #333;
+    border-radius: 50%;
+    margin: 14px auto;
+    position: relative;
+    background: #fff;
+}
+
+.num {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 8px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.n1{transform:rotate(30deg)} .n2{transform:rotate(60deg)}
+.n3{transform:rotate(90deg)} .n4{transform:rotate(120deg)}
+.n5{transform:rotate(150deg)} .n6{transform:rotate(180deg)}
+.n7{transform:rotate(210deg)} .n8{transform:rotate(240deg)}
+.n9{transform:rotate(270deg)} .n10{transform:rotate(300deg)}
+.n11{transform:rotate(330deg)} .n12{transform:rotate(0deg)}
+
+.hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: left;
+    cursor: grab;
+}
+
+.hour {
+    width: calc(var(--clock-size) * 0.25);
+    height: 6px;
+    background: #222;
+}
+
+.minute {
+    width: calc(var(--clock-size) * 0.38);
+    height: 3px;
+    background: var(--primary);
+}
+
+.center {
+    width: 12px;
+    height: 12px;
+    background: #222;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hand.hidden {
+    display: none;
+}
+
+.actions {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.actions button {
+    padding: 6px 14px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* ================= FILTER ROW FIX ================= */
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-item label {
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.datetime-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Inputs */
+.filter-item input,
+.filter-item select {
+    height: 38px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+/* Width control */
+.filter-item select { width: 120px; }
+.filter-item input[type="date"] { width: 150px; }
+.filter-item input[placeholder="HH:MM"] { width: 100px; }
+.filter-item input[type="text"] { width: 180px; }
+
+/* Push display to right */
+.filter-item:last-child {
+    margin-left: auto;
+}
