@@ -1,0 +1,224 @@
+/* =====================================================
+   MASTERS MODERN PAGE
+   ===================================================== */
+
+.masters-body {
+    background:     #d1e0ee;
+    min-height: 100vh;
+}
+
+/* Header */
+/* Top Bar */
+.top-bar {
+    height: 70px;
+    background: linear-gradient(90deg, #ffffff);
+    color: rgb(0, 0, 0);
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+}
+
+
+.breadcrumb {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.breadcrumb span {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* Header Right */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    width: 240px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+/* Wrapper */
+.masters-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.page-subtitle {
+    margin-top: 8px;
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+/* Section */
+.master-section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #334155;
+}
+
+/* Grid */
+.masters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+/* Cards */
+.master-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 22px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.master-card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.master-card p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.master-card:hover {
+    transform: translateY(-6px);
+    border-color: #2563eb;
+    box-shadow: 0 10px 24px rgba(37,99,235,0.15);
+}
+
+/* Icons */
+.icon {
+    font-size: 36px;
+}
+
+.icon.blue { color: #2563eb; }
+.icon.green { color: #16a34a; }
+.icon.indigo { color: #4f46e5; }
+.icon.cyan { color: #0891b2; }
+.icon.orange { color: #ea580c; }
+.icon.purple { color: #7c3aed; }
+.icon.amber { color: #d97706; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .masters-header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+}
+.master-card .material-symbols-outlined {
+    font-size: 40px;
+}
+/* =========================================
+   SECTION TITLE BOX STYLE
+   ========================================= */
+
+.section-title {
+    display: inline-block;
+    background: linear-gradient(135deg, #e0e7ff, #f1f5ff);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    border: 1px solid #c7d2fe;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+/* =========================================
+   SECTION OUTER BOX STYLE
+   ========================================= */
+
+.master-section-box {
+    background: linear-gradient(180deg, #ffffff, #f3f6fb);
+    padding: 40px;
+    border-radius: 22px;
+    margin-bottom: 70px;
+    border: 1px solid rgba(255,255,255,0.6);
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.08),
+        0 5px 15px rgba(15, 23, 42, 0.05),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+
+    transition: all 0.3s ease;
+}
+
+.master-section-box:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 25px 60px rgba(15, 23, 42, 0.12),
+        0 12px 28px rgba(15, 23, 42, 0.08),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+/* Section Header inside box */
+.section-header {
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0f172a;
+}
