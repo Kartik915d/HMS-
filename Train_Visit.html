@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Train Visit - ICD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: "Segoe UI", sans-serif;
+    background:#f4f6f9;
+}
+
+/* Header */
+.page-header{
+    background:#ffffff;
+    padding:15px 20px;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.page-header h2{
+    margin:0;
+    font-weight:600;
+    color:#333;
+}
+
+/* Buttons */
+.btn-group{
+    display:flex;
+    gap:8px;
+}
+
+.btn{
+    padding:6px 12px;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:13px;
+    color:#fff;
+}
+
+.btn-grey{background:#6c757d;}
+.btn-blue{background:#007bff;}
+.btn-green{background:#28a745;}
+.btn-red{background:#dc3545;}
+.btn-orange{background:#ff5722;}
+
+.btn:hover{opacity:0.9;}
+
+/* Form Section */
+.form-container{
+    background:#fff;
+    padding:20px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:15px 60px;
+}
+
+.form-group{
+    display:flex;
+    align-items:center;
+}
+
+.form-group label{
+    width:170px;
+    font-size:13px;
+    font-weight:600;
+    color:#444;
+}
+
+.form-group input,
+.form-group select{
+    flex:1;
+    padding:5px 8px;
+    border:1px solid #ccc;
+    border-radius:3px;
+    font-size:13px;
+}
+
+.form-group input[type="checkbox"]{
+    width:auto;
+}
+
+/* Table */
+.table-section{
+    background:#fff;
+    padding:10px 20px 30px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+}
+
+thead{
+    background:#6c757d;
+    color:#fff;
+}
+
+th, td{
+    padding:8px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+tbody{
+    background:#fafafa;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="page-header">
+    <h2>Train Visit - ICD</h2>
+    <div class="btn-group">
+        <button class="btn btn-grey">+ Add</button>
+        <button class="btn btn-blue">Search</button>
+        <button class="btn btn-green">Sample File</button>
+        <button class="btn btn-blue">Placement Memo Upload</button>
+        <button class="btn btn-blue">Removal Memo Upload</button>
+        <button class="btn btn-orange">Cancel</button>
+        <button class="btn btn-red">Exit</button>
+    </div>
+</div>
+
+<!-- Form -->
+<div class="form-container">
+    <div class="form-grid">
+
+        <div class="form-group">
+            <label>Train No :</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label>* Line No Allotted :</label>
+            <select><option>Select</option></select>
+        </div>
+
+        <div class="form-group">
+            <label>* CTO :</label>
+            <select><option>Select</option></select>
+        </div>
+
+        <div class="form-group">
+            <label>POD :</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label>* Origin :</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label>POL :</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label>* ETA :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>* ETD :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>ATA :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>ATD :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>Unloading Start Date :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>Loading Start Date :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>Unloading Comp Date :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>Loading Comp Date :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>Removal Memo Date :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>Engine Attach Date :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>Placement Time :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>Release Time :</label>
+            <input type="datetime-local">
+        </div>
+
+        <div class="form-group">
+            <label>Reefer Train Flag :</label>
+            <input type="checkbox">
+        </div>
+
+        <div class="form-group">
+            <label>Back Loading Declaration Time :</label>
+            <input type="datetime-local">
+        </div>
+
+    </div>
+</div>
+
+<!-- Table -->
+<div class="table-section">
+<table>
+    <thead>
+        <tr>
+            <th>Dept Date</th>
+            <th>Dept Time</th>
+            <th>Train No</th>
+            <th>Wagon No</th>
+            <th>Cont No</th>
+            <th>Cont Size</th>
+            <th>Cont Status</th>
+            <th>Line</th>
+            <th>GR Wt.</th>
+            <th>POD</th>
+            <th>FPD</th>
+            <th>Origin</th>
+            <th>Terminal</th>
+            <th>Seal No</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="14">No Records Available</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+</body>
+</html>
