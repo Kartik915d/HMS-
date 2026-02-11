@@ -1,239 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>SSR Approval - HMS</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f9;
-    }
-    .page {
-      padding: 15px;
-      background: #fff;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8" />
+<title>SSR Approval - HMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    /* Header */
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    .top-bar h2 {
-      margin: 0;
-      font-size: 20px;
-    }
-    .btn {
-      padding: 6px 14px;
-      border: none;
-      color: #fff;
-      cursor: pointer;
-      font-size: 13px;
-      margin-left: 6px;
-    }
-    .btn-save { background: #28a745; }
-    .btn-cancel { background: #fd7e14; }
-    .btn-exit { background: #dc3545; }
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+}
 
-    /* Layout */
-    .main {
-      display: flex;
-      gap: 20px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 15px;
-    }
-    .left, .right {
-      flex: 1;
-    }
+.page{
+    padding:15px;
+    background:#fff;
+    min-height:100vh;
+    box-sizing:border-box;
+}
 
-    .form-row {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 10px;
-    }
-    .form-group {
-      flex: 1;
-    }
-    .form-group label {
-      display: block;
-      font-size: 13px;
-      margin-bottom: 4px;
-      color: #333;
-    }
-    .form-group input, .form-group textarea, .form-group select {
-      width: 100%;
-      padding: 6px;
-      font-size: 13px;
-      box-sizing: border-box;
-    }
-    textarea { resize: none; }
+/* ================= HEADER ================= */
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
 
-    .section {
-      background: #fff8e1;
-      padding: 8px;
-      font-weight: bold;
-      border: 1px solid #ffe0b2;
-      margin-bottom: 10px;
-    }
+.top-bar h2{
+    margin:0;
+    font-size:20px;
+}
 
-    /* Documents */
-    .documents {
-      margin-top: 20px;
-      border: 1px solid #ccc;
-    }
-    .documents-header {
-      background: #5a6f8f;
-      color: #fff;
-      padding: 8px;
-      font-weight: bold;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13px;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background: #e9edf5;
-    }
-    .add-btn {
-      float: right;
-      background: #007bff;
-      color: #fff;
-      padding: 2px 6px;
-      cursor: pointer;
-    }
-  </style>
+/* ================= BUTTONS ================= */
+.button-group{
+    display:flex;
+    gap:8px;
+}
+
+.btn{
+    padding:6px 16px;
+    border:none;
+    border-radius:4px;
+    font-size:13px;
+    cursor:pointer;
+    color:#fff;
+    text-decoration:none;   /* important for <a> */
+    display:inline-flex;    /* makes <a> behave like button */
+    align-items:center;
+    justify-content:center;
+}
+
+.btn-save{ background:#28a745; }
+.btn-cancel{ background:#fd7e14; }
+.btn-exit{ background:#dc3545; }
+
+.btn:hover{
+    opacity:0.9;
+}
+
+/* ================= LAYOUT ================= */
+.main{
+    display:flex;
+    gap:20px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:15px;
+}
+
+.left,.right{
+    flex:1;
+}
+
+.form-row{
+    display:flex;
+    gap:15px;
+    margin-bottom:10px;
+}
+
+.form-group{
+    flex:1;
+}
+
+.form-group label{
+    display:block;
+    font-size:13px;
+    margin-bottom:4px;
+    color:#333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:6px;
+    font-size:13px;
+    box-sizing:border-box;
+}
+
+textarea{ resize:none; }
+
+/* ================= SECTION TITLE ================= */
+.section{
+    background:#fff8e1;
+    padding:8px;
+    font-weight:bold;
+    border:1px solid #ffe0b2;
+    margin-bottom:10px;
+}
+
+/* ================= DOCUMENTS ================= */
+.documents{
+    margin-top:20px;
+    border:1px solid #ccc;
+}
+
+.documents-header{
+    background:#5a6f8f;
+    color:#fff;
+    padding:8px;
+    font-weight:bold;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.add-btn{
+    background:#007bff;
+    padding:2px 8px;
+    cursor:pointer;
+    border-radius:3px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:8px;
+}
+
+th{
+    background:#e9edf5;
+}
+</style>
 </head>
-<body>
-  <div class="page">
 
-    <!-- Header -->
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
     <div class="top-bar">
-      <h2>SSR Approval</h2>
-      <div>
-        <button class="btn btn-save">Save</button>
-        <button class="btn btn-cancel">Cancel</button>
-        <button class="btn btn-exit">Exit</button>
-      </div>
+        <h2>SSR Approval</h2>
+
+        <div class="button-group">
+            <button type="button" class="btn btn-save">Save</button>
+            <button type="button" class="btn btn-cancel">Cancel</button>
+            <a href="ssr.html" class="btn btn-exit">Exit</a>
+        </div>
     </div>
 
-    <!-- Main Content -->
+    <!-- MAIN -->
     <div class="main">
 
-      <!-- Left Section -->
-      <div class="left">
-        <div class="form-row">
-          <div class="form-group">
-            <label>Customer</label>
-            <input type="text" value="20TH CENTURY FINANCE CORPORATION" readonly />
-          </div>
+        <!-- LEFT -->
+        <div class="left">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Customer</label>
+                    <input type="text" value="20TH CENTURY FINANCE CORPORATION" readonly>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>SSR Type</label>
+                    <input type="text" value="aryan001" readonly>
+                </div>
+                <div class="form-group">
+                    <label>SSR Date</label>
+                    <input type="text" value="09/02/2026 15:43" readonly>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>JNPT VCN No.</label>
+                    <input type="text" value="123456" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Vessel Name</label>
+                    <input type="text" value="NISHANT66" readonly>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea rows="2" readonly>tr</textarea>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Qty</label>
+                    <input type="number" value="10" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Remarks</label>
+                    <input type="text" value="ok" readonly>
+                </div>
+            </div>
+
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label>SSR Type</label>
-            <input type="text" value="aryan001" readonly />
-          </div>
-          <div class="form-group">
-            <label>SSR Date</label>
-            <input type="text" value="09/02/2026 15:43" readonly />
-          </div>
-        </div>
+        <!-- RIGHT -->
+        <div class="right">
 
-        <div class="form-row">
-          <div class="form-group">
-            <label>JNPT VCN No.</label>
-            <input type="text" value="123456" readonly />
-          </div>
-          <div class="form-group">
-            <label>Vessel Name</label>
-            <input type="text" value="NISHANT66" readonly />
-          </div>
-        </div>
+            <div class="section">Approval Details</div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label>Notes</label>
-            <textarea rows="2" readonly>tr</textarea>
-          </div>
-        </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Request Id</label>
+                    <input type="text" value="48" readonly>
+                </div>
+            </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label>Qty</label>
-            <input type="number" value="10" readonly />
-          </div>
-          <div class="form-group">
-            <label>Remarks</label>
-            <input type="text" value="ok" readonly />
-          </div>
-        </div>
-      </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>SSR No</label>
+                    <input type="text" value="20/0003" readonly>
+                </div>
+                <div class="form-group">
+                    <label>*Approval Status</label>
+                    <select>
+                        <option>Approve</option>
+                        <option>Reject</option>
+                    </select>
+                </div>
+            </div>
 
-      <!-- Right Section -->
-      <div class="right">
-        <div class="section">Approval Details</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Approval Remarks</label>
+                    <textarea rows="2">ok</textarea>
+                </div>
+            </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label>Request Id</label>
-            <input type="text" value="48" readonly />
-          </div>
         </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>SSR No</label>
-            <input type="text" value="20/0003" readonly />
-          </div>
-          <div class="form-group">
-            <label>*Approval Status</label>
-            <select>
-              <option>Approve</option>
-              <option>Reject</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label>Approval Remarks</label>
-            <textarea rows="2">ok</textarea>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <!-- Documents -->
+    <!-- DOCUMENTS -->
     <div class="documents">
-      <div class="documents-header">
-        Documents
-        <span class="add-btn">+</span>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Document Details</th>
-            <th>File Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="2" style="text-align:center;">No documents added</td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="documents-header">
+            <span>Documents</span>
+            <span class="add-btn">+</span>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Document Details</th>
+                    <th>File Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" style="text-align:center;">No documents added</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-  </div>
+</div>
+
 </body>
 </html>
