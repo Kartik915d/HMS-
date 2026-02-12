@@ -1,71 +1,27 @@
-// ===== DATA ARRAYS =====
+document.addEventListener("DOMContentLoaded", function () {
 
-const quickAccessItems = [
-    "Customer Master",
-    "Tax Heads",
-    "Tariff Heads",
-    "Tariff Contract",
-    "Marine Operation Dashboard",
-    "SSR Master",
-    "SSR Approval",
-    "Train Visit"
-    // 👉 Paste your full Quick Access list here
-];
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
 
-const vesselItems = [
-    "SEASPAN LAHORE-R2894",
-    "MAERSK CUBANGO-R2791",
-    "CELSIUS EINDHOVEN-R2746",
-    "MSC POSITANO-R2830"
-    // 👉 Paste your full Vessel list here
-];
+            // Inject header
+            document.getElementById("header-placeholder").innerHTML = data;
 
-// ===== LOAD ITEMS FUNCTION =====
-
-function loadDropdown(listId, items) {
-    const list = document.getElementById(listId);
-    list.innerHTML = "";
-
-    items.forEach(item => {
-        const div = document.createElement("div");
-        div.className = "dropdown-item";
-        div.innerText = item;
-
-        div.addEventListener("click", function () {
-            const dropdown = this.closest(".dropdown");
-            dropdown.querySelector(".dropdown-header").innerText = item;
-            dropdown.querySelector(".dropdown-body").style.display = "none";
+            // AFTER header is loaded → run initialization
+            initializeHeader();
         });
 
-        list.appendChild(div);
-    });
+});
+
+
+function initializeHeader() {
+
+    // ===== SHOW BACK BUTTON IF NOT DASHBOARD =====
+    const currentPage = window.location.pathname.split("/").pop();
+
+    if (currentPage !== "dashboard.html" && currentPage !== "") {
+        const backBtn = document.getElementById("backButton");
+        if (backBtn) backBtn.style.display = "inline-block";
+    }
+
 }
-
-// ===== TOGGLE DROPDOWN =====
-
-document.querySelectorAll(".dropdown-header").forEach(header => {
-    header.addEventListener("click", function () {
-        const body = this.nextElementSibling;
-        body.style.display = body.style.display === "block" ? "none" : "block";
-    });
-});
-
-// ===== SEARCH FILTER =====
-
-document.querySelectorAll(".dropdown-search").forEach(input => {
-    input.addEventListener("keyup", function () {
-        const filter = this.value.toLowerCase();
-        const items = this.nextElementSibling.querySelectorAll(".dropdown-item");
-
-        items.forEach(item => {
-            item.style.display = item.innerText.toLowerCase().includes(filter)
-                ? "block"
-                : "none";
-        });
-    });
-});
-
-// ===== INIT LOAD =====
-
-loadDropdown("quickAccessList", quickAccessItems);
-loadDropdown("vesselList", vesselItems);

@@ -1,7 +1,12 @@
 /* =====================================================
    MASTERS MODERN PAGE
    ===================================================== */
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
 .masters-body {
     background:     #d1e0ee;
     min-height: 100vh;

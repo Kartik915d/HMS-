@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>HMS | Finance Billing</title>
+
+    <!-- Page Styling -->
     <link rel="stylesheet" href="style2.css">
+
+    <!-- Global Header Styling -->
+    <link rel="stylesheet" href="header.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
-<body class="masters-body">
+<body class="masters-body" data-page="inner">
 
-<header class="top-bar">
-    <h2>Finance Billing</h2>
-    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
-</header>
-
-<!-- same head & header as above -->
+<!-- GLOBAL HEADER -->
+<div id="header-placeholder"></div>
 
 <main class="masters-wrapper">
 
@@ -26,9 +28,20 @@
 <div class="section-header"><h3>Invoicing</h3></div>
 <div class="masters-grid">
 
-<a href="#" class="master-card"><span class="material-symbols-outlined icon indigo">description</span><div><h4>Vessel Invoice Generation</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon blue">request_quote</span><div><h4>Miscellaneous Invoice Generation</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon purple">note</span><div><h4>Credit Note</h4></div></a>
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon indigo">description</span>
+<div><h4>Vessel Invoice Generation</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon blue">request_quote</span>
+<div><h4>Miscellaneous Invoice Generation</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon purple">note</span>
+<div><h4>Credit Note</h4></div>
+</a>
 
 </div>
 </section>
@@ -38,10 +51,25 @@
 <div class="section-header"><h3>Approvals</h3></div>
 <div class="masters-grid">
 
-<a href="#" class="master-card"><span class="material-symbols-outlined icon blue">approval</span><div><h4>Invoice Approval</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon orange">receipt</span><div><h4>Credit Note Approval</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon cyan">verified</span><div><h4>Payment Approval</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon green">person_add</span><div><h4>Customer Registration Approval</h4></div></a>
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon blue">approval</span>
+<div><h4>Invoice Approval</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon orange">receipt</span>
+<div><h4>Credit Note Approval</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon cyan">verified</span>
+<div><h4>Payment Approval</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon green">person_add</span>
+<div><h4>Customer Registration Approval</h4></div>
+</a>
 
 </div>
 </section>
@@ -51,10 +79,25 @@
 <div class="section-header"><h3>Payments</h3></div>
 <div class="masters-grid">
 
-<a href="#" class="master-card"><span class="material-symbols-outlined icon green">payments</span><div><h4>Payment Entry</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon green">receipt_long</span><div><h4>Payment Receipt</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon amber">sync</span><div><h4>Refund Entry Preparation</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon amber">account_balance_wallet</span><div><h4>TDS Receipt Entry Preparation</h4></div></a>
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon green">payments</span>
+<div><h4>Payment Entry</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon green">receipt_long</span>
+<div><h4>Payment Receipt</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon amber">sync</span>
+<div><h4>Refund Entry Preparation</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon amber">account_balance_wallet</span>
+<div><h4>TDS Receipt Entry Preparation</h4></div>
+</a>
 
 </div>
 </section>
@@ -64,12 +107,33 @@
 <div class="section-header"><h3>Reporting & Integration</h3></div>
 <div class="masters-grid">
 
-<a href="#" class="master-card"><span class="material-symbols-outlined icon indigo">monitoring</span><div><h4>SAP Interface Dashboard</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon purple">mail</span><div><h4>Invoice Mail Resent</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon green">mail</span><div><h4>Invoice Receipt Mail Sent</h4></div></a>
-<a href="#" class="master-card"><span class="material-symbols-outlined icon orange">lock</span><div><h4>Vessel Closure Finance</h4></div></a>
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon indigo">monitoring</span>
+<div><h4>SAP Interface Dashboard</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon purple">mail</span>
+<div><h4>Invoice Mail Resent</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon green">mail</span>
+<div><h4>Invoice Receipt Mail Sent</h4></div>
+</a>
+
+<a href="#" class="master-card">
+<span class="material-symbols-outlined icon orange">lock</span>
+<div><h4>Vessel Closure Finance</h4></div>
+</a>
 
 </div>
 </section>
 
 </main>
+
+<!-- LOAD GLOBAL HEADER SCRIPT -->
+<script src="header.js"></script>
+
+</body>
+</html>
