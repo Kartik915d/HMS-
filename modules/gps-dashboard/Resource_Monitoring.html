@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resource Monitoring</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        background: #e9e9e9;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #555;
+    }
+
+    .btn-exit {
+        background: #e14c2a;
+        color: white;
+        text-decoration: none;
+        padding: 8px 14px;
+        border-radius: 4px;
+        font-weight: 500;
+    }
+
+    .filters {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 12px 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+
+    .filters label {
+        font-size: 14px;
+        color: #555;
+        font-weight: 500;
+    }
+
+    input, select {
+        padding: 6px 8px;
+        border: 1px solid #bbb;
+        border-radius: 3px;
+        min-width: 170px;
+        background: white;
+    }
+
+    .btn-display {
+        background: #2c69c9;
+        color: white;
+        border: none;
+        padding: 7px 16px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        background: white;
+        border: 1px solid #ccc;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: max-content;
+        min-width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #cfcfcf;
+        padding: 8px 12px;
+        text-align: center;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    th {
+        background: #7a8190;
+        color: white;
+        font-weight: 500;
+    }
+
+    .time-header {
+        background: #7a8190;
+        color: white;
+        font-weight: 500;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top-bar">
+        <div class="title">Resource Monitoring</div>
+        <a href="./gps-dashboard.html" class="btn-exit">✖ Exit</a>
+    </div>
+
+    <div class="filters">
+        <label>From Date & Time:</label>
+        <input type="datetime-local">
+
+        <label>To Date & Time:</label>
+        <input type="datetime-local">
+
+        <label>Time Slice:</label>
+        <select>
+            <option>Select</option>
+            <option>1 Hour</option>
+            <option>2 Hours</option>
+            <option>4 Hours</option>
+            <option>8 Hours</option>
+        </select>
+
+        <button class="btn-display">Display</button>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Resources</th>
+                    <th>MVEHICLE1</th>
+                    <th>MVEHICLE2</th>
+                    <th>PACIFIC I</th>
+                    <th>PACIFIC7</th>
+                    <th>SARLA</th>
+                    <th>SHM XXII</th>
+                    <th>SHM XXIII</th>
+                    <th>SHM XXIV</th>
+                    <th>SHM XXV</th>
+                    <th>SHM XXVI</th>
+                    <th>SHM XXVII</th>
+                    <th>TER123</th>
+                    <th>TER6</th>
+                    <th>DAISY STAR</th>
+                    <th>KNK DISHA</th>
+                    <th>KONNA STAR</th>
+                    <th>LOTUS STAR</th>
+                    <th>MOGRA STAR</th>
+                    <th>OCEAN CREST</th>
+                    <th>OCEAN DIVINE</th>
+                    <th>OCEAN FREEDOM</th>
+                    <th>OCEAN SWAN 3</th>
+                    <th>OCEAN VICTOR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample empty row -->
+                <tr>
+                    <td class="time-header">--:--</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
