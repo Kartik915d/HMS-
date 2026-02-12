@@ -77,16 +77,4 @@ modules/
 - Export to Excel / PDF
 - Authentication System
 
----
 
-## 👨‍💻 Author
-
-Kartik Dubey  
-Computer Engineering Student  
-Port Operations & System Design Enthusiast
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
