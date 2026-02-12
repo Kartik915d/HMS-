@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSR Request</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        .top-buttons {
+            float: right;
+        }
+
+        .btn {
+            padding: 4px 12px;
+            border: none;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 13px;
+            margin-left: 5px;
+        }
+
+        .btn-add {
+            background-color: #6c757d;
+        }
+
+        .btn-search {
+            background-color: #1f5e8a;
+        }
+
+        .btn-exit {
+            background-color: #d9534f;
+        }
+
+        .form-section {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            width: 130px;
+        }
+
+        input {
+            padding: 5px;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .documents {
+            margin-top: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: 60%;
+        }
+
+        .documents-header {
+            background-color: #5d6d87;
+            color: white;
+            padding: 8px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #7d8597;
+            color: white;
+            padding: 6px;
+            text-align: left;
+        }
+
+        td {
+            padding: 6px;
+        }
+
+        .btn-upload {
+            background-color: #6fa3c8;
+            color: white;
+            padding: 4px 10px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .btn-view {
+            background-color: #1f5e8a;
+            color: white;
+            padding: 4px 10px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .note {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .required {
+            color: red;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>
+        SSR Request
+        <div class="top-buttons">
+            <a href="#" class="btn btn-add">+ Add</a>
+            <a href="#" class="btn btn-search">🔍 Search</a>
+            <a href="ssr.html" class="btn btn-exit">✖ Exit</a>
+        </div>
+    </h2>
+
+    <div class="clearfix"></div>
+ss
+    <!-- Form Section -->
+    <div class="form-section">
+
+        <label><span class="required">*</span> Customer :</label>
+        <input type="text">
+
+        <label><span class="required">*</span> SSR Type :</label>
+        <input type="text"><br>
+
+        <label><span class="required">*</span> VIA/VCN No :</label>
+        <input type="text">
+
+        <label>Vessel Name :</label>
+        <input type="text"><br>
+
+        <label>Notes :</label>
+        <input type="text">
+
+        <label>SSR Date :</label>
+        <input type="date"><br>
+
+        <label><span class="required">*</span> Quantity :</label>
+        <input type="number">
+
+        <label>Remarks :</label>
+        <input type="text"><br>
+
+        <label>Request Id :</label>
+        <input type="text">
+
+        <label>Status :</label>
+        <input type="text">
+
+    </div>
+
+    <!-- Documents Section -->
+    <div class="documents">
+        <div class="documents-header">Documents</div>
+
+        <table border="1">
+            <tr>
+                <th>Document Details</th>
+                <th>File Name</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <button class="btn-upload">⬆ Upload</button>
+                    <button class="btn-view">⬇ View</button>
+                </td>
+                <td><input type="text" style="width:95%;"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button class="btn-upload">⬆ Upload</button>
+                    <button class="btn-view">⬇ View</button>
+                </td>
+                <td><input type="text" style="width:95%;"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button class="btn-upload">⬆ Upload</button>
+                    <button class="btn-view">⬇ View</button>
+                </td>
+                <td><input type="text" style="width:95%;"></td>
+            </tr>
+
+        </table>
+
+        <div class="note">
+            <strong>Note:</strong> Files should be less than 2 MB
+        </div>
+    </div>
+
+</body>
+</html>
