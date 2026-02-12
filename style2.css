@@ -1,7 +1,12 @@
 /* =====================================================
    MASTERS MODERN PAGE
    ===================================================== */
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
 .masters-body {
     background:     #d1e0ee;
     min-height: 100vh;
@@ -221,4 +226,27 @@
     font-size: 18px;
     font-weight: 600;
     color: #0f172a;
+}
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+    background:#f8f9fa;
+    border-bottom:1px solid #ddd;
+}
+
+.page-header h2{
+    margin:0;
+    font-size:20px;
+}
+
+.back-link{
+    text-decoration:none;
+    color:#007bff;
+    font-weight:500;
+}
+
+.back-link:hover{
+    text-decoration:underline;
 }

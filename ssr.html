@@ -1,31 +1,86 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>HMS | SSR</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Page Styling -->
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- Global Header Styling -->
+    <link rel="stylesheet" href="header.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 
-<body class="operations-body">
+<body class="masters-body" data-page="inner">
 
-<header class="top-bar">
-    <h2>SSR</h2>
-    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
-</header>
+<!-- GLOBAL HEADER -->
+<div id="header-placeholder"></div>
 
-<main class="operations-center">
-    <div class="operations-container">
+<main class="masters-wrapper">
 
-        <a href="ssr_master.html" class="op-card">SSR Master</a>
-        <a href="ssr_confirmation.html" class="op-card">SSR Confirmation</a>
-        <a href="ssr_approval.html" class="op-card">SSR Approval</a>
-        <a href="ssr_approval_pendency.html" class="op-card">SSR Approval Pendency</a>
+    <h1 class="page-title">SSR</h1>
+    <p class="page-subtitle">Manage special service requests and approvals.</p>
 
-        <a href="ssr_confirmation_pendency.html" class="op-card">SSR Confirmation Pendency</a>
-        <a href="ssr_request.html" class="op-card">SSR Request</a>
+    <section class="master-section-box">
+        <div class="masters-grid">
 
-    </div>
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon blue">settings</span>
+                <div>
+                    <h4>SSR Master</h4>
+                    <p>Manage SSR configurations</p>
+                </div>
+            </a>
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon green">check_circle</span>
+                <div>
+                    <h4>SSR Confirmation</h4>
+                    <p>Confirm service requests</p>
+                </div>
+            </a>
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon indigo">approval</span>
+                <div>
+                    <h4>SSR Approval</h4>
+                    <p>Approve SSR requests</p>
+                </div>
+            </a>
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon orange">pending</span>
+                <div>
+                    <h4>SSR Approval Pendency</h4>
+                    <p>Pending approvals list</p>
+                </div>
+            </a>
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon purple">schedule</span>
+                <div>
+                    <h4>SSR Confirmation Pendency</h4>
+                    <p>Pending confirmations</p>
+                </div>
+            </a>
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon cyan">send</span>
+                <div>
+                    <h4>SSR Request</h4>
+                    <p>Create new service request</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
 </main>
+
+<!-- LOAD GLOBAL HEADER SCRIPT -->
+<script src="header.js"></script>
 
 </body>
 </html>

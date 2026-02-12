@@ -3,29 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <title>HMS | Train Operations</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Page Styling -->
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- Global Header Styling -->
+    <link rel="stylesheet" href="header.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
-<body class="operations-body">
 
-<header class="top-bar">
-    <h2>Train Operations</h2>
-    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
-</header>
+<body class="masters-body" data-page="inner">
 
-<main class="operations-center">
-    <div class="operations-container">
+<!-- GLOBAL HEADER -->
+<div id="header-placeholder"></div>
 
-        <a href="Train_Visit.html" class="op-card">Train Visit</a>
-        <a href="#" class="op-card">Train Wise Moves</a>
-        <a href="#" class="op-card">Daily Report Update</a>
-        <a href="#" class="op-card">Reconciliation Signoff</a>
-        <a href="#" class="op-card">Monthly Rake Details</a>
+<main class="masters-wrapper">
 
-        <a href="#" class="op-card">Daily Rake Wise Handling</a>
-        <a href="#" class="op-card">Monthly Rake Wise Handling</a>
+    <h1 class="page-title">Train Operations</h1>
+    <p class="page-subtitle">Manage railway movement and reconciliation.</p>
 
-    </div>
+    <section class="master-section-box">
+        <div class="masters-grid">
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon blue">train</span>
+                <div>
+                    <h4>Train Visit</h4>
+                    <p>Manage train arrivals</p>
+                </div>
+            </a>
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon green">swap_horiz</span>
+                <div>
+                    <h4>Train Wise Moves</h4>
+                    <p>Track train movement</p>
+                </div>
+            </a>
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon orange">edit_note</span>
+                <div>
+                    <h4>Daily Report Update</h4>
+                    <p>Update daily train logs</p>
+                </div>
+            </a>
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon purple">verified</span>
+                <div>
+                    <h4>Reconciliation Signoff</h4>
+                    <p>Approve reconciliations</p>
+                </div>
+            </a>
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon indigo">calendar_month</span>
+                <div>
+                    <h4>Monthly Rake Details</h4>
+                    <p>View monthly rake data</p>
+                </div>
+            </a>
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon cyan">bar_chart</span>
+                <div>
+                    <h4>Daily Rake Wise Handling</h4>
+                    <p>Daily rake statistics</p>
+                </div>
+            </a>
+
+            <a href="#" class="master-card">
+                <span class="material-symbols-outlined icon amber">analytics</span>
+                <div>
+                    <h4>Monthly Rake Wise Handling</h4>
+                    <p>Monthly handling analytics</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
 </main>
+
+<!-- LOAD GLOBAL HEADER SCRIPT -->
+<script src="header.js"></script>
 
 </body>
 </html>

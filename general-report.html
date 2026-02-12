@@ -1,54 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>HMS | General Reports</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>HMS | General Reports</title>
+
+<!-- Page Styling -->
+<link rel="stylesheet" href="style2.css">
+
+<!-- Global Header Styling -->
+<link rel="stylesheet" href="header.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body class="operations-body">
 
-<header class="top-bar">
-    <h2>General Reports</h2>
-    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
-</header>
+<body class="masters-body" data-page="inner">
 
-<main class="operations-center">
-    <div class="operations-container">
+<!-- GLOBAL HEADER -->
+<div id="header-placeholder"></div>
 
-        <!-- Column 1 -->
-        <a href="#" class="op-card">Vessel Movement Report</a>
-        <a href="#" class="op-card">Berth Occupancy Report</a>
-        <a href="#" class="op-card">Vessel Finance Report</a>
-        <a href="#" class="op-card">Job Details Report</a>
-        <a href="#" class="op-card">Audit Report</a>
-        <a href="#" class="op-card">Customer Ledger Report</a>
+<main class="masters-wrapper">
 
-        <!-- Column 2 -->
-        <a href="#" class="op-card">Job Order Pendancy</a>
-        <a href="#" class="op-card">Employee Master Report</a>
-        <a href="#" class="op-card">Invoice Registry Report</a>
-        <a href="#" class="op-card">Pilot Job Report</a>
-        <a href="#" class="op-card">Revenue Report</a>
-        <a href="#" class="op-card">Exchange Rate Report</a>
+<h1 class="page-title">General Reports</h1>
+<p class="page-subtitle">
+    View operational, financial and system level reports.
+</p>
 
-        <!-- Column 3 -->
-        <a href="#" class="op-card">Job Order Completion</a>
-        <a href="#" class="op-card">Resource Utilization Report</a>
-        <a href="#" class="op-card">Invoice List Report</a>
-        <a href="#" class="op-card">Tug Job Report</a>
-        <a href="#" class="op-card">Excel Report Master</a>
-        <a href="#" class="op-card">Daily CashBook Report</a>
+<!-- ================================================= -->
+<!-- Vessel & Marine Reports -->
+<!-- ================================================= -->
 
-        <!-- Column 4 -->
-        <a href="#" class="op-card">Vessel Profile Report</a>
-        <a href="#" class="op-card">Work Order Report</a>
-        <a href="#" class="op-card">Finance Ledger Report</a>
-        <a href="#" class="op-card">Report Master</a>
-        <a href="#" class="op-card">Terminal Throughput Report</a>
-        <a href="#" class="op-card">BPT Dues Report</a>
+<section class="master-section-box">
+<div class="section-header">
+    <h3>Vessel & Marine Reports</h3>
+</div>
 
-    </div>
+<div class="masters-grid">
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon blue">directions_boat</span>
+    <div><h4>Vessel Movement Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon cyan">anchor</span>
+    <div><h4>Berth Occupancy Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon purple">description</span>
+    <div><h4>Vessel Profile Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon indigo">insights</span>
+    <div><h4>Terminal Throughput Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon green">engineering</span>
+    <div><h4>Pilot Job Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon amber">local_shipping</span>
+    <div><h4>Tug Job Report</h4></div>
+</a>
+
+</div>
+</section>
+
+<!-- ================================================= -->
+<!-- Finance & Billing Reports -->
+<!-- ================================================= -->
+
+<section class="master-section-box">
+<div class="section-header">
+    <h3>Finance & Billing Reports</h3>
+</div>
+
+<div class="masters-grid">
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon green">payments</span>
+    <div><h4>Vessel Finance Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon indigo">receipt_long</span>
+    <div><h4>Invoice Registry Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon blue">list_alt</span>
+    <div><h4>Invoice List Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon purple">account_balance</span>
+    <div><h4>Finance Ledger Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon cyan">account_balance_wallet</span>
+    <div><h4>Customer Ledger Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon amber">currency_exchange</span>
+    <div><h4>Exchange Rate Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon green">trending_up</span>
+    <div><h4>Revenue Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon indigo">menu_book</span>
+    <div><h4>Daily CashBook Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon orange">assignment</span>
+    <div><h4>BPT Dues Report</h4></div>
+</a>
+
+</div>
+</section>
+
+<!-- ================================================= -->
+<!-- Job & Operations Reports -->
+<!-- ================================================= -->
+
+<section class="master-section-box">
+<div class="section-header">
+    <h3>Job & Operations Reports</h3>
+</div>
+
+<div class="masters-grid">
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon blue">work</span>
+    <div><h4>Job Details Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon green">pending_actions</span>
+    <div><h4>Job Order Pendancy</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon purple">task_alt</span>
+    <div><h4>Job Order Completion</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon cyan">assignment</span>
+    <div><h4>Work Order Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon indigo">groups</span>
+    <div><h4>Employee Master Report</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon amber">analytics</span>
+    <div><h4>Resource Utilization Report</h4></div>
+</a>
+
+</div>
+</section>
+
+<!-- ================================================= -->
+<!-- System & Configuration Reports -->
+<!-- ================================================= -->
+
+<section class="master-section-box">
+<div class="section-header">
+    <h3>System & Configuration Reports</h3>
+</div>
+
+<div class="masters-grid">
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon purple">settings</span>
+    <div><h4>Report Master</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon green">grid_view</span>
+    <div><h4>Excel Report Master</h4></div>
+</a>
+
+<a href="#" class="master-card">
+    <span class="material-symbols-outlined icon blue">security</span>
+    <div><h4>Audit Report</h4></div>
+</a>
+
+</div>
+</section>
+
 </main>
+
+<!-- LOAD GLOBAL HEADER SCRIPT -->
+<script src="header.js"></script>
 
 </body>
 </html>
