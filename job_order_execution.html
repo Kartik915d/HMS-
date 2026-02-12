@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Order Execution - HMS</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .form-section {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        table th {
+            white-space: nowrap;
+            font-size: 13px;
+        }
+
+        table td {
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid mt-3">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4>Job Order Execution</h4>
+
+        <div>
+            <button class="btn btn-success">Excel</button>
+            <button class="btn btn-danger" onclick="history.back()">Exit</button>
+        </div>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="form-section mb-3">
+        <div class="row g-3">
+
+            <div class="col-md-2">
+                <label>JNPT VCN No</label>
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="col-md-2">
+                <label>Resource</label>
+                <select class="form-select">
+                    <option>Select</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <label>Job Order</label>
+                <select class="form-select">
+                    <option>Select</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <label>From Date</label>
+                <input type="datetime-local" class="form-control">
+            </div>
+
+            <div class="col-md-2">
+                <label>To Date</label>
+                <input type="datetime-local" class="form-control">
+            </div>
+
+            <div class="col-md-2 d-flex align-items-end">
+                <button class="btn btn-primary w-100">Filter</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Execution Table -->
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped align-middle">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>JO_NBR</th>
+                    <th>Planned Equipment</th>
+                    <th>Actual Equipment</th>
+                    <th>Planned Operator</th>
+                    <th>Actual Operator</th>
+                    <th>Code Desc</th>
+                    <th>Job Order Code</th>
+                    <th>Vessel Name</th>
+                    <th>Vessel Type</th>
+                    <th>Customer Code</th>
+                    <th>Customer Name</th>
+                    <th>Visit ID</th>
+                    <th>IMO</th>
+                    <th>GRT</th>
+                    <th>LOA</th>
+                    <th>From Location</th>
+                    <th>To Location</th>
+                    <th>Estimated Start</th>
+                    <th>Estimated End</th>
+                    <th>Actual Start</th>
+                    <th>Actual End</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>CY27836</td>
+                    <td>MOGRA STAR</td>
+                    <td>MOGRA STAR</td>
+                    <td>Tug Boat 02</td>
+                    <td>Tug Boat 02</td>
+                    <td>Vessel Arrival</td>
+                    <td>Additional Tug Boat</td>
+                    <td>HALLEY</td>
+                    <td>CONTAINER</td>
+                    <td>CSP3</td>
+                    <td>COSCO SHIPPING LINES INDIA</td>
+                    <td>R2887</td>
+                    <td>9275062</td>
+                    <td>26833</td>
+                    <td>210.07</td>
+                    <td>Outer Anchorage</td>
+                    <td>Berth 2</td>
+                    <td>03/02/2026 13:57</td>
+                    <td>03/02/2026 14:57</td>
+                    <td>10/02/2026 12:06</td>
+                    <td>10/02/2026 12:06</td>
+                </tr>
+
+                <tr>
+                    <td>CY92550</td>
+                    <td>MOGRA STAR</td>
+                    <td>NAVIN KUMAR</td>
+                    <td>NAVIN KUMAR</td>
+                    <td>NAVIN KUMAR</td>
+                    <td>Vessel Arrival</td>
+                    <td>Pilots Booking</td>
+                    <td>MSC AQUARIUS VII</td>
+                    <td>CONTAINER</td>
+                    <td>MSC1</td>
+                    <td>MSC Mediterranean Shipping</td>
+                    <td>R2823</td>
+                    <td>9262704</td>
+                    <td>75484</td>
+                    <td>299.9</td>
+                    <td>Outer Anchorage</td>
+                    <td>Berth 4</td>
+                    <td>23/01/2026 09:09</td>
+                    <td>23/01/2026 10:09</td>
+                    <td>23/01/2026 11:43</td>
+                    <td>23/01/2026 11:59</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
