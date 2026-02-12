@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>SSR Approval - HMS</title>
+<title>SSR Confirmation - HMS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <style>
 body{
     margin:0;
-    font-family: Arial, sans-serif;
+    font-family:Arial, sans-serif;
     background:#f4f6f9;
 }
 
@@ -45,8 +45,8 @@ body{
     font-size:13px;
     cursor:pointer;
     color:#fff;
-    text-decoration:none;   /* important for <a> */
-    display:inline-flex;    /* makes <a> behave like button */
+    text-decoration:none;
+    display:inline-flex;
     align-items:center;
     justify-content:center;
 }
@@ -63,8 +63,6 @@ body{
 .main{
     display:flex;
     gap:20px;
-    border-bottom:1px solid #ccc;
-    padding-bottom:15px;
 }
 
 .left,.right{
@@ -85,21 +83,22 @@ body{
     display:block;
     font-size:13px;
     margin-bottom:4px;
-    color:#333;
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select{
+.form-group select,
+.form-group textarea{
     width:100%;
     padding:6px;
     font-size:13px;
     box-sizing:border-box;
 }
 
-textarea{ resize:none; }
+textarea{
+    resize:none;
+}
 
-/* ================= SECTION TITLE ================= */
+/* ================= SECTION ================= */
 .section{
     background:#fff8e1;
     padding:8px;
@@ -127,8 +126,8 @@ textarea{ resize:none; }
 .add-btn{
     background:#007bff;
     padding:2px 8px;
-    cursor:pointer;
     border-radius:3px;
+    cursor:pointer;
 }
 
 table{
@@ -154,12 +153,12 @@ th{
 
     <!-- HEADER -->
     <div class="top-bar">
-        <h2>SSR Approval</h2>
+        <h2>SSR Confirmation</h2>
 
         <div class="button-group">
             <button type="button" class="btn btn-save">Save</button>
             <button type="button" class="btn btn-cancel">Cancel</button>
-            <a href="ssr.html" class="btn btn-exit">Exit</a>
+            <a href="/modules/ssr/ssr.html" class="btn btn-exit">Exit</a>
         </div>
     </div>
 
@@ -172,47 +171,47 @@ th{
             <div class="form-row">
                 <div class="form-group">
                     <label>Customer</label>
-                    <input type="text" value="20TH CENTURY FINANCE CORPORATION" readonly>
+                    <input type="text" value="20TH CENTURY FINANCE CORPORATION">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label>SSR Type</label>
-                    <input type="text" value="aryan001" readonly>
+                    <input type="text" value="aryan001">
                 </div>
                 <div class="form-group">
                     <label>SSR Date</label>
-                    <input type="text" value="09/02/2026 15:43" readonly>
+                    <input type="text" value="09/02/2026 15:43">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label>JNPT VCN No.</label>
-                    <input type="text" value="123456" readonly>
+                    <input type="text" value="123456">
                 </div>
                 <div class="form-group">
                     <label>Vessel Name</label>
-                    <input type="text" value="NISHANT66" readonly>
+                    <input type="text" value="NISHANT66">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label>Notes</label>
-                    <textarea rows="2" readonly>tr</textarea>
+                    <textarea rows="2">tr</textarea>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label>Qty</label>
-                    <input type="number" value="10" readonly>
+                    <input type="number" value="10">
                 </div>
                 <div class="form-group">
                     <label>Remarks</label>
-                    <input type="text" value="ok" readonly>
+                    <input type="text">
                 </div>
             </div>
 
@@ -226,14 +225,14 @@ th{
             <div class="form-row">
                 <div class="form-group">
                     <label>Request Id</label>
-                    <input type="text" value="48" readonly>
+                    <input type="text" value="48">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
                     <label>SSR No</label>
-                    <input type="text" value="20/0003" readonly>
+                    <input type="text" value="20/0003">
                 </div>
                 <div class="form-group">
                     <label>*Approval Status</label>
@@ -248,6 +247,24 @@ th{
                 <div class="form-group">
                     <label>Approval Remarks</label>
                     <textarea rows="2">ok</textarea>
+                </div>
+            </div>
+
+            <div class="section">Confirmation Details</div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>*Confirmation Status</label>
+                    <select>
+                        <option>Select</option>
+                        <option>Confirmed</option>
+                        <option>Rejected</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Invoice No</label>
+                    <input type="text">
                 </div>
             </div>
 

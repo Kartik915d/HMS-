@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Incident Information Report Form 1</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons button,
+.buttons a {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.add {
+    background: #5cb85c;
+}
+
+.search {
+    background: #0275d8;
+}
+
+.exit {
+    background: #d9534f;
+}
+
+.buttons button:hover,
+.buttons a:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+form {
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+input, select, textarea {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    font-size: 13px;
+}
+
+.small-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+    <h2>Incident Information Report Form 1</h2>
+
+    <div class="buttons">
+        <button class="add" type="button">+ Add</button>
+        <button class="search" type="button">Search</button>
+        <a href="incident-management.html" class="btn exit">Exit</a>
+    </div>
+</div>
+
+<form>
+
+<div class="row">
+    <div class="col">
+        <label>1. *Email</label>
+        <input type="email" required>
+    </div>
+    <div class="col">
+        <label>Incident No</label>
+        <input type="text">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <label>2. *Name of Organisation</label>
+        <select required>
+            <option>Select</option>
+        </select>
+    </div>
+    <div class="col">
+        <label>3. If PUB / SEZ / Other - Name of Organisation</label>
+        <input type="text">
+    </div>
+</div>
+
+<label>4. *Type of incident</label>
+<div class="checkbox-group">
+    <div class="small-checkbox"><input type="checkbox"> Near Miss</div>
+    <div class="small-checkbox"><input type="checkbox"> Injury - First Aid</div>
+    <div class="small-checkbox"><input type="checkbox"> Injury - Medical / Emergency Treatment</div>
+    <div class="small-checkbox"><input type="checkbox"> Equipment Failure</div>
+    <div class="small-checkbox"><input type="checkbox"> Property Damage</div>
+    <div class="small-checkbox"><input type="checkbox"> Fire</div>
+    <div class="small-checkbox"><input type="checkbox"> Explosion</div>
+    <div class="small-checkbox"><input type="checkbox"> Road Accident</div>
+    <div class="small-checkbox"><input type="checkbox"> Theft</div>
+    <div class="small-checkbox"><input type="checkbox"> None of these</div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col">
+        <label>5. If None of these</label>
+        <input type="text">
+    </div>
+    <div class="col">
+        <label>6. *Site / Location</label>
+        <input type="text" required>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <label>7. Vessel(s)/Ship(s) involved - Vessel Name(s), IMO & Voyage Number(s)</label>
+        <textarea></textarea>
+    </div>
+    <div class="col">
+        <label>8. *Date and Time of incident</label>
+        <input type="datetime-local" required>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <label>9. Name(s) of affected individual(s)</label>
+        <textarea></textarea>
+    </div>
+    <div class="col">
+        <label>10. *Description of injuries</label>
+        <div class="checkbox-group">
+            <div class="small-checkbox"><input type="checkbox"> No Injury</div>
+            <div class="small-checkbox"><input type="checkbox"> Minor</div>
+            <div class="small-checkbox"><input type="checkbox"> Temporary Disability</div>
+            <div class="small-checkbox"><input type="checkbox"> Permanent Disability</div>
+            <div class="small-checkbox"><input type="checkbox"> Major</div>
+            <div class="small-checkbox"><input type="checkbox"> Fatal</div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <label>11. Total number of injured individual(s)</label>
+        <input type="number">
+    </div>
+    <div class="col">
+        <label>12. *Treatments required, if any</label>
+        <select>
+            <option>Select</option>
+            <option>First Aid</option>
+            <option>Hospitalisation</option>
+            <option>None</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <label>13. *Whether or not proper PPE was being used?</label>
+        <select>
+            <option>Select</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+    </div>
+    <div class="col">
+        <label>14. *Is/Are the injured individual(s) employed by other organization(s)?</label>
+        <select>
+            <option>Select</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <label>15. If yes - give details</label>
+        <textarea></textarea>
+    </div>
+    <div class="col">
+        <label>16. *Reported By</label>
+        <input type="text">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <label>17. *Reporting officer mobile number</label>
+        <input type="tel">
+    </div>
+    <div class="col">
+        <label>18. *Date and Time of Report</label>
+        <input type="datetime-local">
+    </div>
+</div>
+
+</form>
+</div>
+
+</body>
+</html>

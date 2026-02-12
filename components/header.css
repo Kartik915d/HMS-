@@ -1,0 +1,182 @@
+/* =====================================================
+   GLOBAL HEADER STYLING
+===================================================== */
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   LEFT SECTION
+===================================================== */
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-logo {
+    height: 40px;
+}
+
+.port-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.port-name select {
+    padding: 6px 10px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f8f9fa;
+    cursor: pointer;
+}
+
+/* =====================================================
+   CENTER SECTION (IMPORTANT FIX FOR ALIGNMENT)
+===================================================== */
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex: 1; /* keeps center perfectly centered */
+}
+
+/* =====================================================
+   DROPDOWN STYLING
+===================================================== */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    padding: 7px 16px;
+    background: #2c3e50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background: #1f2d3a;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 42px;
+    left: 0;
+    background: #ffffff;
+    width: 260px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    border-radius: 6px;
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background: #f2f2f2;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =====================================================
+   RIGHT SECTION
+===================================================== */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Profile Circle */
+.profile-circle {
+    width: 34px;
+    height: 34px;
+    background: #2c3e50;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* =====================================================
+   BACK TO DASHBOARD BUTTON
+===================================================== */
+
+.back-btn {
+    display: none; /* Hidden by default */
+    padding: 7px 14px;
+    border-radius: 6px;
+    background: #f1f1f1;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #ddd;
+}
+
+/* =====================================================
+   RESPONSIVE SUPPORT (Optional but Good Practice)
+===================================================== */
+
+@media (max-width: 1100px) {
+    .nav-center {
+        gap: 15px;
+    }
+
+    .dropdown-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .dropdown-content {
+        width: 220px;
+    }
+}
