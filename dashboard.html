@@ -5,10 +5,10 @@
     <title>HMS Dashboard</title>
 
     <!-- Page CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <!-- Header CSS -->
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="./components/header.css">
 
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
@@ -23,52 +23,52 @@
 <main class="dashboard-center">
     <div class="menu-container">
 
-        <a href="masters.html" class="menu-card icon-card">
+        <a href="./modules/masters/masters.html" class="menu-card icon-card">
             <span class="material-symbols-outlined icon blue">database</span>
             <span class="card-text">Masters</span>
         </a>
 
-        <a href="setup.html" class="menu-card icon-card">
+        <a href="./modules/setup/setup.html" class="menu-card icon-card">
             <span class="material-symbols-outlined icon gray">settings</span>
             <span class="card-text">Setup</span>
         </a>
 
-        <a href="operations.html" class="menu-card icon-card">
+        <a href="./modules/operations/operations.html" class="menu-card icon-card">
             <span class="material-symbols-outlined icon indigo">directions_boat</span>
             <span class="card-text">Operations</span>
         </a>
 
-        <a href="finance-billing.html" class="menu-card icon-card">
+        <a href="./modules/finance-billing/finance-billing.html" class="menu-card icon-card">
             <span class="material-symbols-outlined icon green">payments</span>
             <span class="card-text">Finance Billing</span>
         </a>
 
-        <a href="gps-dashboard.html" class="menu-card icon-card">
+        <a href="./modules/gps-dashboard/gps-dashboard.html" class="menu-card icon-card">
             <span class="material-symbols-outlined icon red">location_on</span>
             <span class="card-text">GPS & Dashboard</span>
         </a>
 
-        <a href="job-order.html" class="menu-card icon-card">
+        <a href="./modules/job-order/job-order.html" class="menu-card icon-card">
             <span class="material-symbols-outlined icon orange">assignment</span>
             <span class="card-text">Job Order</span>
         </a>
 
-        <a href="general-report.html" class="menu-card icon-card">
+        <a href="./modules/general-reports/general-report.html" class="menu-card icon-card">
             <span class="material-symbols-outlined icon cyan">bar_chart</span>
             <span class="card-text">General Reports</span>
         </a>
 
-        <a href="incident-management.html" class="menu-card icon-card">
+        <a href="./modules/incident-management/incident-management.html" class="menu-card icon-card">
             <span class="material-symbols-outlined icon amber">warning</span>
             <span class="card-text">Incident Management</span>
         </a>
 
-        <a href="ssr.html" class="menu-card icon-card">
+        <a href="./modules/ssr/ssr.html" class="menu-card icon-card">
             <span class="material-symbols-outlined icon purple">history_edu</span>
             <span class="card-text">SSR</span>
         </a>
 
-        <a href="ICD.html" class="menu-card icon-card">
+        <a href="./modules/icd/ICD.html" class="menu-card icon-card">
             <span class="material-symbols-outlined icon pink">menu_book</span>
             <span class="card-text">ICD</span>
         </a>
@@ -78,7 +78,8 @@
 
 <!-- LOAD HEADER FILE -->
 <script>
-fetch("header.html")
+// fetch("header.html")
+fetch("./components/header.html")
   .then(response => response.text())
   .then(data => {
     document.getElementById("header-placeholder").innerHTML = data;
