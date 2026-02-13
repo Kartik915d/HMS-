@@ -57,58 +57,65 @@
    DROPDOWN STYLING
 ===================================================== */
 
+/* Dropdown Container */
 .dropdown {
     position: relative;
+    display: inline-block;
 }
 
+/* Button */
 .dropdown-btn {
-    padding: 7px 16px;
     background: #2c3e50;
-    color: #ffffff;
+    color: white;
+    padding: 8px 14px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 13px;
-    transition: 0.3s ease;
 }
 
-.dropdown-btn:hover {
-    background: #1f2d3a;
-}
-
-/* Dropdown Menu */
+/* Dropdown Content */
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 42px;
+    top: 100%; /* Attach directly below button */
     left: 0;
-    background: #ffffff;
-    width: 260px;
-    max-height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    border-radius: 6px;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 999;
 }
 
+/* Links */
 .dropdown-content a {
-    display: block;
+    color: black;
     padding: 10px 14px;
     text-decoration: none;
-    color: #333;
-    font-size: 13px;
-    transition: background 0.2s ease;
+    display: block;
 }
 
 .dropdown-content a:hover {
-    background: #f2f2f2;
+    background-color: #f1f1f1;
 }
 
-/* Show dropdown on hover */
+/* IMPORTANT: Show dropdown when hovering entire container */
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* Dropdown button text */
+.dropdown-btn {
+    font-size: 13px;   /* Reduce button text size */
+}
+
+/* Dropdown links text */
+.dropdown-content a {
+    font-size: 13px;   /* Reduce menu item size */
+}
+
+/* Optional: Reduce entire header font */
+.top-bar {
+    font-size: 14px;
+}
+
 
 /* =====================================================
    RIGHT SECTION
