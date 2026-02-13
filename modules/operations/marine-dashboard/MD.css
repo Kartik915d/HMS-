@@ -243,3 +243,122 @@ tbody tr:hover {
         flex-wrap: wrap;
     }
 }
+
+.hand {
+    cursor: grab;
+}
+
+#clockModal {
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.clock-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.clock {
+    width: 220px;
+    height: 220px;
+    border: 6px solid #1f2d3d;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.hand {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: bottom;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.clock-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+}
+
+.clock {
+    width: 250px;
+    height: 250px;
+    border: 6px solid #2c3e50;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+}
+
+/* Clock numbers */
+.num {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Position numbers around circle */
+.n12 { top: 5px; left: 50%; transform: translateX(-50%); }
+.n1  { top: 20px; right: 60px; }
+.n2  { top: 60px; right: 20px; }
+.n3  { top: 50%; right: 5px; transform: translateY(-50%); }
+.n4  { bottom: 60px; right: 20px; }
+.n5  { bottom: 20px; right: 60px; }
+.n6  { bottom: 5px; left: 50%; transform: translateX(-50%); }
+.n7  { bottom: 20px; left: 60px; }
+.n8  { bottom: 60px; left: 20px; }
+.n9  { top: 50%; left: 5px; transform: translateY(-50%); }
+.n10 { top: 60px; left: 20px; }
+.n11 { top: 20px; left: 60px; }
+
+/* Hands */
+.hand {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: bottom;
+}
+
+.hour {
+    width: 6px;
+    height: 60px;
+    background: #2c3e50;
+}
+
+.minute {
+    width: 4px;
+    height: 90px;
+    background: #e74c3c;
+}
+
+.center {
+    width: 10px;
+    height: 10px;
+    background: #2c3e50;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,7 +1,6 @@
 let activeInput = null;
 let dragging = null;
 let mode = "hour";
-
 let selectedHourAngle = 0;
 
 /* ---------- DOM ---------- */
@@ -72,29 +71,31 @@ document.addEventListener("mouseup", () => dragging = null);
 document.addEventListener("mousemove", e => {
     if (!dragging) return;
 
-    const r = clock.getBoundingClientRect();
-    const cx = r.left + r.width / 2;
-    const cy = r.top + r.height / 2;
+    const rect = clock.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
 
     const dx = e.clientX - cx;
     const dy = e.clientY - cy;
 
     let rawAngle = Math.atan2(dy, dx) * 180 / Math.PI;
-    let clockAngle = (rawAngle + 90 + 360) % 360;
 
-    setHand(dragging, clockAngle);
+    // Convert so that 12 o'clock = 0°
+    let angle = (rawAngle + 450) % 360;
+
+    setHand(dragging, angle);
 
     if (mode === "hour") {
-        selectedHourAngle = clockAngle;
+        selectedHourAngle = angle;
     }
 
     updatePreview();
 });
 
-/* ---------- SCROLL TO ADJUST (SMOOTH) ---------- */
+/* ---------- SCROLL ---------- */
 
 let scrollAccumulator = 0;
-const SCROLL_THRESHOLD = 55; // ↑ increase = less sensitive
+const SCROLL_THRESHOLD = 55;
 
 clock.addEventListener("wheel", e => {
     e.preventDefault();
@@ -124,7 +125,6 @@ clock.addEventListener("wheel", e => {
     updatePreview();
 }, { passive: false });
 
-
 /* ---------- SET TIME ---------- */
 
 function setTime() {
@@ -142,10 +142,10 @@ function setTime() {
 
     const minuteAngle = getClockAngle(minuteHand);
 
-    let hour = Math.floor(selectedHourAngle / 30);
+    let hour = Math.round(selectedHourAngle / 30) % 12;
     if (hour === 0) hour = 12;
 
-    let minute = Math.floor(minuteAngle / 6);
+    let minute = Math.round(minuteAngle / 6) % 60;
 
     activeInput.value =
         `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
@@ -156,10 +156,11 @@ function setTime() {
 /* ---------- LIVE PREVIEW ---------- */
 
 function updatePreview() {
-    let hour = Math.floor(selectedHourAngle / 30);
+
+    let hour = Math.round(selectedHourAngle / 30) % 12;
     if (hour === 0) hour = 12;
 
-    let minute = Math.floor(getClockAngle(minuteHand) / 6);
+    let minute = Math.round(getClockAngle(minuteHand) / 6) % 60;
 
     preview.textContent =
         `Selected Time: ${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
@@ -167,17 +168,16 @@ function updatePreview() {
 
 /* ---------- HELPERS ---------- */
 
-function setHand(hand, clockAngle) {
-    const cssAngle = clockAngle - 90;
-    hand.style.transform = `rotate(${cssAngle}deg)`;
+function setHand(hand, angle) {
+    hand.style.transform = `rotate(${angle}deg)`;
 }
 
 function getClockAngle(hand) {
     const t = getComputedStyle(hand).transform;
     if (t === "none") return 0;
 
-    const v = t.split("(")[1].split(")")[0].split(",");
-    const angle = Math.atan2(v[1], v[0]) * 180 / Math.PI;
+    const values = t.split("(")[1].split(")")[0].split(",");
+    const angle = Math.atan2(values[1], values[0]) * 180 / Math.PI;
 
-    return (angle + 90 + 360) % 360;
+    return (angle + 360) % 360;
 }

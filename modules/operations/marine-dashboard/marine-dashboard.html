@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Marine Operation Dashboard</title>
-<link rel="stylesheet" href="MD.css ">
+<link rel="stylesheet" href="MD.css">
+<!-- <link rel="stylesheet" href="../../../css/style.css"> -->
 </head>
 
 <body class="marine-body">
@@ -239,6 +240,36 @@
 </tbody>
 </table>
 </section>
+<!-- ================= CLOCK MODAL ================= -->
+<div class="modal" id="clockModal">
+    <div class="clock-box">
+
+        <div class="clock" id="clock">
+            <div class="num n12">12</div>
+            <div class="num n1">1</div>
+            <div class="num n2">2</div>
+            <div class="num n3">3</div>
+            <div class="num n4">4</div>
+            <div class="num n5">5</div>
+            <div class="num n6">6</div>
+            <div class="num n7">7</div>
+            <div class="num n8">8</div>
+            <div class="num n9">9</div>
+            <div class="num n10">10</div>
+            <div class="num n11">11</div>
+
+            <div class="hand hour" id="hourHand"></div>
+            <div class="hand minute hidden" id="minuteHand"></div>
+            <div class="center"></div>
+        </div>
+
+        <div class="actions">
+            <button class="primary" onclick="setTime()">Next</button>
+            <button onclick="closeClock()">Cancel</button>
+        </div>
+
+    </div>
+</div>
 
 
 <!-- CLOCK SCRIPT -->
