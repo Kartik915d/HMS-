@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Creation</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6f9;
+}
+
+/* MAIN LAYOUT */
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT USER LIST */
+.user-list {
+    width: 280px;
+    background: #e6e9ef;
+    border-right: 2px solid #ccc;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.user-list h3 {
+    margin-top: 0;
+}
+
+.user-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-list li {
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.user-list li:hover {
+    background: #d1d7e0;
+}
+
+/* RIGHT SECTION */
+.form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.page-header {
+    background: #e9edf3;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+.page-header h2 {
+    margin: 0;
+}
+
+.header-buttons button {
+    padding: 6px 12px;
+    margin-left: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.btn-add { background: #6c757d; }
+.btn-edit { background: #007bff; }
+.btn-mail { background: #17a2b8; }
+.btn-exit { background: #e53935; }
+
+/* FORM AREA */
+.form-container {
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 6px;
+}
+
+.location-box {
+    margin-top: 25px;
+    border-top: 2px solid #ccc;
+    padding-top: 15px;
+}
+
+.location-title {
+    background: #6c7a89;
+    color: white;
+    padding: 5px 10px;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <!-- LEFT USER LIST -->
+    <div class="user-list">
+        <h3>User List</h3>
+        <ul id="userList"></ul>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="form-section">
+
+        <!-- HEADER -->
+        <div class="page-header">
+            <h2>User Creation</h2>
+            <div class="header-buttons">
+                <button class="btn-add">+ Add</button>
+                <button class="btn-edit">✎ Edit</button>
+                <button class="btn-mail">✉ Send Mail</button>
+                <button class="btn-exit" onclick="exitPage()">✖ Exit</button>
+            </div>
+        </div>
+
+        <!-- FORM CONTENT -->
+        <div class="form-container">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>*User Name:</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="form-group">
+                    <label>*Password:</label>
+                    <input type="password">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>*User Type:</label>
+                    <select>
+                        <option>Internal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>*Mail ID:</label>
+                    <input type="email">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>*Customer Name:</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>*Role:</label>
+                    <select>
+                        <option>administrator</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="location-box">
+                <div class="location-title">Location</div>
+                <input type="text" value="Jawaharlal Nehru Port Authority" style="width:60%; padding:6px;">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+const users = [
+"admin","admin1","adminBulk","adminContainer","ALLANAFORM1","ALLANAFORM2",
+"Ankurp","Anmols","Ashwjeet","Balap","Bhupesh","Bibhash","BMCT",
+"bmctterminal","BPCL","bpclterminal","BritishPetro","CWC","DeepakPetro",
+"Dewasg","Dilipk","GaneshBenzo","Ghanp","GTI","GTITERMINAL","IMC",
+"Indianoil","InnerANCH","IOTL","JNCH","JNPAIT","JNPT","JNPTBT",
+"Kamleshp","KT12175","Kuldeepr","Laxmank","Lioneln","Mangalt",
+"Manishk","Mishra","MK12405","MK12426","MM11883","Mof01","Mof02",
+"Mohars","MSK","msup1","Murugn","Navink","Nireshr","Nnarayan",
+"NSDT","NSFT","NSICT","NSIGT","NSIGTTER","NT12415","ONGCFORM1",
+"ONGCFORM2","OutterANCH","Paragp","Parking","Pilot01","Pilot02",
+"Pilot1","Pilotboat01","PORTCONTROL","PUB","Rajeshk","Rajeshku",
+"Reliance","RN12416","RT12416","Rtest","safety","Sekhars","SEZ",
+"Shailenp","Shashj","SK12437","Tes2","test","TESTUSER",
+"Tug02","Tug03","Tugm1","Tugmaster","Venkatv","VirajAgro",
+"Vishalr","Vivekn","VT12040"
+];
+
+const userList = document.getElementById("userList");
+
+users.forEach(user => {
+    const li = document.createElement("li");
+    li.textContent = user;
+    li.onclick = function() {
+        document.getElementById("username").value = user;
+    };
+    userList.appendChild(li);
+});
+
+function exitPage() {
+    window.history.back();
+}
+</script>
+
+</body>
+</html>
