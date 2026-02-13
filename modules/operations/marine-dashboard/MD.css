@@ -1,0 +1,245 @@
+/* ================= GLOBAL ================= */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ================= HEADER ================= */
+
+.marine-header {
+    background: #1f2d3d;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marine-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* ================= BUTTONS ================= */
+
+button,
+.btn-red {
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-yellow {
+    background: #ffc107;
+    color: #000;
+}
+
+.btn-yellow:hover {
+    background: #e0a800;
+}
+
+.btn-red {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-red:hover {
+    background: #c82333;
+}
+
+.btn-blue {
+    background: #007bff;
+    color: white;
+}
+
+.btn-blue:hover {
+    background: #0069d9;
+}
+
+/* ================= FILTER CARD ================= */
+
+.filter-card {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.filter-item label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.filter-item input,
+.filter-item select {
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 150px;
+    font-size: 13px;
+}
+
+/* Date + Time */
+.datetime-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.clock-btn {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ================= TABS ================= */
+
+.tabs {
+    display: flex;
+    margin: 0 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #e9ecef;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.tab.active {
+    background: #1f2d3d;
+    color: white;
+}
+
+.tab:hover {
+    background: #ced4da;
+}
+
+/* ================= TABLE CARD ================= */
+
+.table-card {
+    background: white;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+/* ================= TABLE ================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+thead {
+    background: #1f2d3d;
+    color: white;
+}
+
+th, td {
+    padding: 8px 6px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #eef3f8;
+}
+
+/* ================= ICON BUTTONS ================= */
+
+.icon-btn {
+    border: none;
+    padding: 4px 6px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.icon-btn.blue {
+    background: #17a2b8;
+    color: white;
+}
+
+.icon-btn.edit {
+    background: #ffc107;
+    color: black;
+}
+
+.icon-btn.green {
+    background: #28a745;
+    color: white;
+}
+
+.icon-btn:hover {
+    opacity: 0.85;
+}
+
+/* ================= REMARK INPUT ================= */
+
+.remark-input {
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width: 100px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+    table {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+}
