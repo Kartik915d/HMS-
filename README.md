@@ -43,19 +43,6 @@ The goal of this system is to provide:
 
 ---
 
-## 🏗 Folder Structure
-
-modules/
-│
-├── gps-dashboard/
-├── hms-dashboard/
-├── berth-planning/
-├── resource-monitoring/
-└── berth-occupancy/
-
-
----
-
 ## 🎯 Features
 
 - Clean Dashboard UI
