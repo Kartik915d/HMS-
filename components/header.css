@@ -10,11 +10,8 @@
     background: #ffffff;
     border-bottom: 1px solid #e0e0e0;
     box-sizing: border-box;
+    font-size: 14px;
 }
-
-/* =====================================================
-   LEFT SECTION
-===================================================== */
 
 .nav-left {
     display: flex;
@@ -22,9 +19,7 @@
     gap: 18px;
 }
 
-.nav-logo {
-    height: 40px;
-}
+.nav-logo { height: 40px; }
 
 .port-name {
     display: flex;
@@ -41,42 +36,34 @@
     cursor: pointer;
 }
 
-/* =====================================================
-   CENTER SECTION (IMPORTANT FIX FOR ALIGNMENT)
-===================================================== */
-
 .nav-center {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
-    flex: 1; /* keeps center perfectly centered */
+    flex: 1;
 }
 
-/* =====================================================
-   DROPDOWN STYLING
-===================================================== */
+/* ---- Dropdowns ---- */
 
-/* Dropdown Container */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Button */
 .dropdown-btn {
     background: #2c3e50;
     color: white;
     padding: 8px 14px;
     border: none;
     cursor: pointer;
+    font-size: 13px;
 }
 
-/* Dropdown Content */
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%; /* Attach directly below button */
+    top: 100%;
     left: 0;
     background-color: white;
     min-width: 200px;
@@ -84,42 +71,19 @@
     z-index: 999;
 }
 
-/* Links */
 .dropdown-content a {
     color: black;
     padding: 10px 14px;
     text-decoration: none;
     display: block;
+    font-size: 13px;
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
+.dropdown-content a:hover { background-color: #f1f1f1; }
 
-/* IMPORTANT: Show dropdown when hovering entire container */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+.dropdown:hover .dropdown-content { display: block; }
 
-/* Dropdown button text */
-.dropdown-btn {
-    font-size: 13px;   /* Reduce button text size */
-}
-
-/* Dropdown links text */
-.dropdown-content a {
-    font-size: 13px;   /* Reduce menu item size */
-}
-
-/* Optional: Reduce entire header font */
-.top-bar {
-    font-size: 14px;
-}
-
-
-/* =====================================================
-   RIGHT SECTION
-===================================================== */
+/* ---- Right / Back Button ---- */
 
 .nav-right {
     display: flex;
@@ -127,34 +91,8 @@
     gap: 15px;
 }
 
-/* Welcome Section */
-.welcome-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-/* Profile Circle */
-.profile-circle {
-    width: 34px;
-    height: 34px;
-    background: #2c3e50;
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-/* =====================================================
-   BACK TO DASHBOARD BUTTON
-===================================================== */
-
 .back-btn {
-    display: none; /* Hidden by default */
+    display: none;
     padding: 7px 14px;
     border-radius: 6px;
     background: #f1f1f1;
@@ -165,25 +103,86 @@
     transition: all 0.3s ease;
 }
 
-.back-btn:hover {
-    background: #ddd;
+.back-btn:hover { background: #ddd; }
+
+/* ---- Profile Section ---- */
+
+/*
+ * position:relative is REQUIRED here so the absolutely-positioned
+ * .profile-popup anchors to .welcome-section and not a higher ancestor.
+ */
+.welcome-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-/* =====================================================
-   RESPONSIVE SUPPORT (Optional but Good Practice)
-===================================================== */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.profile-circle {
+    width: 34px;
+    height: 34px;
+    background: #2c3e50;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*
+ * .profile-popup defined ONCE — no duplicate.
+ * The original bug: a second .profile-popup { display:none }
+ * appeared at the bottom of the file and overrode .show
+ * due to CSS cascade (later = higher priority at equal specificity).
+ */
+.profile-popup {
+    display: none;
+    position: absolute;
+    top: 44px;
+    right: 0;
+    width: 200px;
+    background: #f1f1f1;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 9999;
+}
+
+/*
+ * Uses 3-part selector for higher specificity than the rule above,
+ * so display:flex reliably wins regardless of stylesheet order.
+ */
+.welcome-section .profile-popup.show {
+    display: flex;
+}
+
+.profile-popup a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.profile-popup a:hover { background: #e0e0e0; }
+
+/* ---- Responsive ---- */
 
 @media (max-width: 1100px) {
-    .nav-center {
-        gap: 15px;
-    }
-
-    .dropdown-btn {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-
-    .dropdown-content {
-        width: 220px;
-    }
+    .nav-center { gap: 15px; }
+    .dropdown-btn { padding: 6px 12px; font-size: 12px; }
+    .dropdown-content { width: 220px; }
 }

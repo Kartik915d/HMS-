@@ -15,17 +15,15 @@
     </div>
 
     <div class="nav-center">
-
         <div class="dropdown">
             <button class="dropdown-btn">Quick Access ▾</button>
             <div class="dropdown-content">
-                <a href="../modules/ssr/ssr_master.html">SSR Master</a>
-                <a href="../modules/ssr/ssr_approval.html">SSR Approval</a>
-                <a href="../modules/icd/Train_Visit.html">Train Visit</a>
-                <a href="../modules/operations/marine-dashboard/marine-dashboard.html">Marine Dashboard</a>
+                <a href="/modules/ssr/ssr_master.html">SSR Master</a>
+                <a href="/modules/ssr/ssr_approval.html">SSR Approval</a>
+                <a href="\modules\icd\Train_Visit.html">Train Visit</a>
+                <a href="\modules\operations\marine-dashboard\marine-dashboard.html">Marine Dashboard</a>
             </div>
         </div>
-
 
         <div class="dropdown">
             <button class="dropdown-btn">Select Vessel ▾</button>
@@ -35,23 +33,30 @@
                 <a href="#">NISHANT66-123456</a>
             </div>
         </div>
-
     </div>
 
-    <!-- RIGHT SECTION -->
-    <div class="nav-right">
+    <!-- nav-right is now position:relative so the popup anchors here -->
+    <div class="nav-right" style="position: relative;">
 
-        <!-- Back Button -->
         <a href="../../dashboard.html" class="back-btn" id="backButton">
             ← Back to Dashboard
         </a>
 
-        <!-- Welcome Section -->
         <div class="welcome-section" id="welcomeSection">
-            <span>Welcome Admin</span>
-            <div class="profile-circle">A</div>
+            <div class="user-info">
+                <span>Welcome Admin</span>
+                <!-- Clicking this circle triggers the popup -->
+                <div class="profile-circle" id="profileBtn">A</div>
+            </div>
+        </div>
+        
+        <div class="profile-popup" id="profilePopup">
+            <a href="#">❓ Help</a>
+            <a href="#">🔒 Change Password</a>
+            <a href="../index.html">⏻ Logout</a>
         </div>
 
     </div>
 
 </header>
+ 
