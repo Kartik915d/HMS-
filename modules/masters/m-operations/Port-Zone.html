@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HMS - Port Zone</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#eef2f7,#d9e4f5);
+}
+
+.container{
+    max-width:1100px;
+    margin:30px auto;
+    padding:25px;
+}
+
+.card{
+    background:#ffffffee;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.title{
+    font-size:20px;
+    font-weight:600;
+}
+
+.btn{
+    padding:6px 14px;
+    border:none;
+    border-radius:5px;
+    font-size:13px;
+    cursor:pointer;
+}
+
+.btn-add{background:#7c8aa5;color:#fff;}
+.btn-search{background:#2d62ed;color:#fff;}
+.btn-exit{background:#e5532d;color:#fff;}
+
+.btn:hover{opacity:0.9;}
+
+.form-row{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    margin-top:40px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+input{
+    padding:7px;
+    width:280px;
+    border:1px solid #ccd6e4;
+    border-radius:5px;
+    font-size:13px;
+}
+
+.required{
+    color:red;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="card">
+
+<div class="header">
+<div class="title">Port Zone</div>
+<div>
+<button class="btn btn-add">+ Add</button>
+<button class="btn btn-search">🔍 Search</button>
+<button class="btn btn-exit" onclick="window.location.href='../masters.html'">✖ Exit</button>
+</div>
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label><span class="required">*</span> Port Zone Code:</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label><span class="required">*</span> Port Zone Name:</label>
+<input type="text">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HMS - Quay Master</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#eef2f7,#d9e4f5);
+}
+.wrapper{
+    display:flex;
+    height:100vh;
+}
+.sidebar{
+    width:260px;
+    background:#eef2f7;
+    border-right:1px solid #cbd5e1;
+    padding:12px;
+    overflow-y:auto;
+}
+.sidebar h3{
+    background:#5c6f8a;
+    color:#fff;
+    padding:8px;
+    font-size:14px;
+    border-radius:4px;
+}
+.sidebar ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.sidebar li{
+    padding:6px;
+    font-size:13px;
+    cursor:pointer;
+}
+.sidebar li.active{
+    color:#e5532d;
+    font-weight:600;
+}
+.main{
+    flex:1;
+    padding:20px;
+}
+.card{
+    background:#ffffffee;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.title{
+    font-size:18px;
+    font-weight:600;
+}
+.btn{
+    padding:5px 12px;
+    border:none;
+    border-radius:4px;
+    font-size:12px;
+    cursor:pointer;
+}
+.btn-add{background:#7c8aa5;color:#fff;}
+.btn-edit{background:#2d62ed;color:#fff;}
+.btn-exit{background:#e5532d;color:#fff;}
+.btn:hover{opacity:0.9;}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 30px;
+    margin-top:15px;
+}
+label{font-size:13px;}
+input{
+    padding:6px;
+    border:1px solid #ccd6e4;
+    border-radius:4px;
+    font-size:13px;
+}
+.required{color:red;}
+
+.berth-table,
+.overlap-table,
+.length-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:12px;
+}
+.berth-table th,
+.overlap-table th,
+.length-table th{
+    background:#7c8aa5;
+    color:#fff;
+    font-size:12px;
+    padding:6px;
+}
+.berth-table td,
+.overlap-table td,
+.length-table td{
+    border:1px solid #e2e8f0;
+    padding:5px;
+    font-size:12px;
+}
+.vessel-box{
+    width:280px;
+    max-height:350px;
+    overflow-y:auto;
+    border:1px solid #d1d5db;
+    padding:8px;
+}
+.section-title{
+    background:#7c8aa5;
+    color:#fff;
+    padding:6px;
+    font-size:13px;
+    margin-top:15px;
+}
+.length-scroll{
+    overflow-x:auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- LEFT LIST -->
+<div class="sidebar">
+<h3>Quay List</h3>
+<ul>
+<li class="active">BMCT</li>
+<li>BPCL</li>
+<li>GTI</li>
+<li>INANCH</li>
+<li>JJLT</li>
+<li>JNPTBT</li>
+<li>MDL</li>
+<li>NSDT</li>
+<li>NSFT</li>
+<li>NSICT</li>
+<li>NSIGT</li>
+<li>ONGC</li>
+<li>OUTANCH</li>
+</ul>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+<div class="card">
+
+<div class="header">
+<div class="title">Quay</div>
+<div>
+<button class="btn btn-add">+ Add</button>
+<button class="btn btn-edit">Edit</button>
+<button class="btn btn-exit" onclick="window.location.href='../masters.html'">Exit</button>
+</div>
+</div>
+
+<div class="form-grid">
+<div>
+<label><span class="required">*</span>Quay Code:</label>
+<input value="BMCT">
+</div>
+<div>
+<label><span class="required">*</span>Description:</label>
+<input value="BMCT">
+</div>
+<div>
+<label><span class="required">*</span>Quay Length:</label>
+<input value="2000">
+</div>
+<div>
+<label>Quay Depth:</label>
+<input value="14">
+</div>
+<div>
+<label><span class="required">*</span>Meter Start Number:</label>
+<input value="1">
+</div>
+<div>
+<label>Meter End Number:</label>
+<input value="2000">
+</div>
+</div>
+
+<div class="section-title">Berth Details</div>
+<table class="berth-table">
+<tr>
+<th>*Berth Code</th>
+<th>*Berth Name</th>
+<th>+</th>
+</tr>
+<tr><td>BM01</td><td>BM01</td><td></td></tr>
+<tr><td>BM02</td><td>BM02</td><td></td></tr>
+<tr><td>BM03</td><td>BM03</td><td></td></tr>
+<tr><td>BM04</td><td>BM04</td><td></td></tr>
+<tr><td>BM05</td><td>BM05</td><td></td></tr>
+<tr><td>BM06</td><td>BM06</td><td></td></tr>
+</table>
+
+<div style="display:flex; gap:30px; margin-top:15px;">
+
+<!-- Vessel Type -->
+<div>
+<div class="section-title">*Vessel Type</div>
+<div class="vessel-box">
+<label><input type="checkbox" checked> BARGE</label><br>
+<label><input type="checkbox" checked> BULK CARRIER</label><br>
+<label><input type="checkbox" checked> BULK/CONTAINER</label><br>
+<label><input type="checkbox" checked> BULK/CONVENTIONAL</label><br>
+<label><input type="checkbox" checked> CONTAINER</label><br>
+<label><input type="checkbox" checked> CONTAINER/MULTIPURPOSE</label><br>
+<label><input type="checkbox" checked> CONTAINER/RO-RO</label><br>
+<label><input type="checkbox" checked> CONVENTIONAL</label><br>
+<label><input type="checkbox" checked> CONVENTIONAL/RO-RO</label><br>
+<label><input type="checkbox" checked> CRUISE</label><br>
+<label><input type="checkbox" checked> FISHING BOAT</label><br>
+<label><input type="checkbox" checked> MILITARY</label><br>
+<label><input type="checkbox" checked> PASSENGER</label><br>
+<label><input type="checkbox" checked> RO-RO</label><br>
+<label><input type="checkbox" checked> SPECIAL PURPOSE VESSEL</label><br>
+<label><input type="checkbox" checked> TANKER</label><br>
+<label><input type="checkbox" checked> YACHT</label><br>
+<label><input type="checkbox"> LNG CARRIER</label><br>
+<label><input type="checkbox"> AIRCRAFT CARRIER</label><br>
+<label><input type="checkbox"> GENERAL CARGO</label><br>
+<label><input type="checkbox"> BULK</label><br>
+</div>
+</div>
+
+</div>
+
+<div class="section-title">Overlapping Quay</div>
+<table class="overlap-table">
+<tr>
+<th>*Overlapping Quay</th>
+<th>*From Meter</th>
+<th>Side</th>
+<th>+</th>
+</tr>
+<tr>
+<td></td><td></td><td></td><td></td>
+</tr>
+</table>
+
+<div class="section-title">Length (meters) / Bollard</div>
+
+<div class="length-scroll">
+<table class="length-table">
+<tr>
+<th>Length (meters)</th>
+<th>1</th><th>6</th><th>11</th><th>16</th><th>21</th>
+<th>26</th><th>31</th><th>36</th><th>41</th><th>46</th>
+<th>51</th><th>56</th><th>61</th><th>66</th><th>71</th>
+<th>76</th><th>81</th><th>86</th><th>91</th><th>96</th>
+<th>101</th><th>106</th><th>111</th><th>116</th><th>121</th>
+<th>126</th><th>131</th><th>136</th><th>141</th><th>146</th>
+<th>151</th><th>156</th>
+</tr>
+<tr>
+<td>Bollard</td>
+<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+<td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
+<td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+<td>31</td><td>32</td>
+</tr>
+</table>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

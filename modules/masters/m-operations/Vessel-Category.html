@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HMS - Vessel Category Master</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#eef2f7,#d9e4f5);
+}
+.wrapper{
+    display:flex;
+    height:100vh;
+}
+.sidebar{
+    width:330px;
+    background:#eef2f7;
+    border-right:1px solid #cbd5e1;
+    padding:15px;
+    overflow-y:auto;
+}
+.sidebar h3{
+    background:#5c6f8a;
+    color:#fff;
+    padding:8px;
+    font-size:14px;
+    border-radius:4px;
+}
+.sidebar ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.sidebar li{
+    padding:6px 8px;
+    font-size:13px;
+    cursor:pointer;
+    border-radius:4px;
+}
+.sidebar li:hover{
+    background:#dde5f1;
+}
+.sidebar li.active{
+    color:#e5532d;
+    font-weight:600;
+}
+
+.main{
+    flex:1;
+    padding:25px;
+}
+.card{
+    background:#ffffffee;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+.title{
+    font-size:18px;
+    font-weight:600;
+}
+.btn{
+    padding:6px 12px;
+    border:none;
+    border-radius:5px;
+    font-size:12px;
+    cursor:pointer;
+}
+.btn-add{background:#7c8aa5;color:#fff;}
+.btn-edit{background:#2d62ed;color:#fff;}
+.btn-exit{background:#e5532d;color:#fff;}
+.btn:hover{opacity:0.9;}
+
+.form-group{
+    margin-bottom:12px;
+}
+label{
+    font-size:13px;
+}
+input{
+    padding:6px;
+    border:1px solid #ccd6e4;
+    border-radius:5px;
+    font-size:13px;
+    width:350px;
+}
+.required{color:red;}
+
+.sub-table{
+    width:60%;
+    margin-top:15px;
+    border-collapse:collapse;
+}
+.sub-table th{
+    background:#7c8aa5;
+    color:#fff;
+    font-size:13px;
+    padding:8px;
+}
+.sub-table td{
+    border:1px solid #e2e8f0;
+    padding:6px;
+}
+.sub-table input{
+    width:100%;
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- LEFT SIDE -->
+<div class="sidebar">
+<h3>Vessel Category List</h3>
+<ul id="vesselList">
+
+<li>211</li>
+<li>45</li>
+<li>45</li>
+<li>AIRCRAFT CARRIER</li>
+<li>BARGE</li>
+<li>BULK</li>
+<li>BULK CARRIER</li>
+<li>BULK/CONTAINER</li>
+<li>BULK/CONVENTIONAL</li>
+<li>BUNKER</li>
+<li>CONTAINER</li>
+<li>CONTAINER/MULTIPURPOSE</li>
+<li>CONTAINER/RO-RO</li>
+<li>CONVENTIONAL</li>
+<li class="active">CONVENTIONAL/RO-RO</li>
+<li>CRUISE</li>
+<li>FISHING BOAT</li>
+<li>GENERAL</li>
+<li>GENERAL CARGO</li>
+<li>LIQUID</li>
+<li>LNG CARRIER</li>
+<li>LOADING CRAFT</li>
+<li>MILITARY</li>
+<li>OFFSHORE VESSELS</li>
+<li>OTHER</li>
+<li>PASSENGER</li>
+<li>RO-RO</li>
+<li>SPECIAL PURPOSE VESSEL</li>
+<li>TANKER</li>
+<li>TEST13</li>
+<li>TEST13</li>
+<li>TK</li>
+<li>WATER BARGE</li>
+<li>YACHT</li>
+
+</ul>
+</div>
+
+<!-- RIGHT SIDE -->
+<div class="main">
+<div class="card">
+
+<div class="header">
+<div class="title">Vessel Category Master</div>
+<div>
+<button class="btn btn-add">+ Add</button>
+<button class="btn btn-edit">Edit</button>
+<button class="btn btn-exit" onclick="window.location.href='../masters.html'">Exit</button>
+</div>
+</div>
+
+<div class="form-group">
+<label><span class="required">*</span>Vessel Category Code :</label><br>
+<input value="122">
+</div>
+
+<div class="form-group">
+<label><span class="required">*</span>Vessel Category Description :</label><br>
+<input value="211">
+</div>
+
+<table class="sub-table">
+<thead>
+<tr>
+<th><span class="required">*</span>Vessel Sub Category Code</th>
+<th><span class="required">*</span>Vessel Sub Category Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><input value="11"></td>
+<td><input value="2"></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll("#vesselList li").forEach(item=>{
+    item.addEventListener("click",function(){
+        document.querySelectorAll("#vesselList li").forEach(li=>li.classList.remove("active"));
+        this.classList.add("active");
+    });
+});
+</script>
+
+</body>
+</html>
