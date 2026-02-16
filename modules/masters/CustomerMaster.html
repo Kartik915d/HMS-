@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HMS | Customer Master</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<style>
+
+/* ================= GLOBAL ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#cfd9e8,#e8eef7);
+}
+
+/* ================= TOP BAR ================= */
+.top-bar{
+    height:70px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.top-bar h2{
+    font-weight:600;
+    font-size:20px;
+}
+
+/* ================= MAIN WRAPPER ================= */
+.wrapper{
+    max-width:1500px;
+    margin:40px auto;
+    padding:0 25px;
+}
+
+/* ================= MAIN CARD ================= */
+.card{
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(12px);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.08);
+}
+
+/* ================= HEADER BUTTONS ================= */
+.header-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.button-group{
+    display:flex;
+    gap:12px;
+}
+
+.btn{
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    color:white;
+    font-size:14px;
+}
+
+.btn-add{background:#64748b;}
+.btn-search{background:#2563eb;}
+.btn-exit{background:#ef4444;}
+
+.btn:hover{
+    opacity:0.85;
+}
+
+/* ================= LAYOUT GRID ================= */
+.master-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:35px;
+}
+
+/* ================= FORM GRID ================= */
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px 30px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:6px;
+    color:#334155;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid #cbd5e1;
+    font-size:14px;
+}
+
+.form-group textarea{
+    resize:none;
+    height:70px;
+}
+
+/* ================= SIDE BOX ================= */
+.side-box{
+    background:white;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.05);
+    margin-bottom:25px;
+}
+
+.side-box-header{
+    background:#475569;
+    color:white;
+    padding:10px 15px;
+    border-radius:12px 12px 0 0;
+    font-weight:600;
+}
+
+.side-box-content{
+    padding:15px;
+}
+
+.checkbox-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+.deposit-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.deposit-row input{
+    width:140px;
+    padding:8px;
+    border-radius:6px;
+    border:1px solid #cbd5e1;
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="top-bar">
+    <h2>Customer Master</h2>
+</header>
+
+<div class="wrapper">
+<div class="card">
+
+<div class="header-bar">
+    <div></div>
+    <div class="button-group">
+        <button class="btn btn-add">+ Add</button>
+        <button class="btn btn-search">Search</button>
+        <button class="btn btn-exit" onclick="window.location.href='masters.html'">Exit</button>
+    </div>
+</div>
+
+<div class="master-grid">
+
+<!-- ================= LEFT SIDE FORM ================= -->
+<div>
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>*Customer Code</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>*Customer Name</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>*Legal Customer Name</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Account Type</label>
+<select><option>Select</option></select>
+</div>
+
+<div class="form-group">
+<label>Country</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>*Location</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>*Zip Code</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>*Terminal</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>State</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>State Code</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>*Address</label>
+<textarea></textarea>
+</div>
+
+<div class="form-group">
+<label>*Address 2</label>
+<textarea></textarea>
+</div>
+
+<div class="form-group">
+<label>*Operations Mail Id</label>
+<textarea></textarea>
+</div>
+
+<div class="form-group">
+<label>*Finance Mail Id</label>
+<textarea></textarea>
+</div>
+
+<div class="form-group">
+<label>Contact Person</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Contact Number</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Fax Number</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Pan No</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Date of registration</label>
+<input type="date">
+</div>
+
+<div class="form-group">
+<label>GSTIN/UIN</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Add Bank Name</label>
+<select><option>Select</option></select>
+</div>
+
+<div class="form-group">
+<label>Customer Department</label>
+<select><option>Select</option></select>
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= RIGHT SIDE ================= -->
+<div>
+
+<!-- Customer Type -->
+<div class="side-box">
+<div class="side-box-header">Customer Type</div>
+<div class="side-box-content">
+
+<div class="checkbox-row"><span>Agent</span><input type="checkbox"></div>
+<div class="checkbox-row"><span>Shipping Line</span><input type="checkbox"></div>
+<div class="checkbox-row"><span>Vessel Operating Agent</span><input type="checkbox"></div>
+<div class="checkbox-row"><span>CFS</span><input type="checkbox"></div>
+<div class="checkbox-row"><span>DPD</span><input type="checkbox"></div>
+<div class="checkbox-row"><span>CTO</span><input type="checkbox"></div>
+<div class="checkbox-row"><span>Others</span><input type="checkbox"></div>
+
+</div>
+</div>
+
+<!-- Deposit Details -->
+<div class="side-box">
+<div class="side-box-header">Deposit Details</div>
+<div class="side-box-content">
+
+<div class="deposit-row">
+<span>Security Deposit</span>
+<input type="text">
+</div>
+
+<div class="deposit-row">
+<span>Transaction Deposit</span>
+<input type="text">
+</div>
+
+<div class="deposit-row">
+<span>PDA Balance</span>
+<input type="text">
+</div>
+
+<div class="deposit-row">
+<span>Min Balance</span>
+<input type="text">
+</div>
+
+<div class="deposit-row">
+<span>Service Tax</span>
+<input type="text">
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HMS - Tariff Heads</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#eef2f7,#d9e4f5);
+}
+.wrapper{
+    display:flex;
+    height:100vh;
+}
+.sidebar{
+    width:360px;
+    background:#eef2f7;
+    border-right:1px solid #cbd5e1;
+    padding:15px;
+    overflow-y:auto;
+}
+.sidebar h3{
+    background:#5c6f8a;
+    color:#fff;
+    padding:8px;
+    font-size:14px;
+    border-radius:4px;
+}
+.sidebar ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.sidebar li{
+    padding:6px 8px;
+    font-size:13px;
+    cursor:pointer;
+    border-radius:4px;
+}
+.sidebar li:hover{
+    background:#dde5f1;
+}
+.sidebar li.active{
+    color:#e5532d;
+    font-weight:600;
+}
+.main{
+    flex:1;
+    padding:25px;
+}
+.card{
+    background:#ffffffee;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+.title{
+    font-size:18px;
+    font-weight:600;
+}
+.btn{
+    padding:6px 12px;
+    border:none;
+    border-radius:5px;
+    font-size:12px;
+    cursor:pointer;
+}
+.btn-add{background:#7c8aa5;color:#fff;}
+.btn-edit{background:#2d62ed;color:#fff;}
+.btn-download{background:#2f6edb;color:#fff;}
+.btn-exit{background:#e5532d;color:#fff;}
+.btn:hover{opacity:0.9;}
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px 30px;
+}
+label{
+    font-size:13px;
+}
+input,select{
+    padding:6px;
+    border:1px solid #ccd6e4;
+    border-radius:5px;
+    font-size:13px;
+}
+.required{color:red;}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- LEFT SIDEBAR -->
+<div class="sidebar">
+<h3>Tariff List</h3>
+<ul id="tariffList">
+
+<li>Additional TugBoat Hire - Sixty Ton</li>
+<li>Additional TugBoat Hire - Fifty Ton</li>
+<li>Additional TugBoat Hire - Thirty Ton</li>
+<li>Anchorage Berth Hire Charges - Foreign</li>
+<li class="active">Anchorage Berth Hire Charges-Coastal</li>
+<li>Berth Hire Charges Ambuja-Coastal</li>
+<li>Berth Hire Charges ONGC-Coastal</li>
+<li>Berth Hire Charges-Coastal</li>
+<li>Berth Hire Charges-Coastal-GTI</li>
+<li>Berth Hire Charges-Coastal-JNPT</li>
+<li>Berth Hire Charges-Coastal-NSICT</li>
+<li>Berth Hire Charges-Coastal-SWB</li>
+<li>Berth Hire Charges-Foreign</li>
+<li>Cold Move Charges-Coastal</li>
+<li>Cold Move Charges-Foreign</li>
+<li>Fresh Water Supply Charges-Coastal</li>
+<li>Fresh Water Supply Charges-Foreign</li>
+<li>Garbage Collection Charges</li>
+<li>Licence fee from Boat Operator</li>
+<li>MBPT Dues-Coastal</li>
+<li>MBPT Dues-Foreign</li>
+<li>Partial Cold Move Charges-Coastal</li>
+<li>Partial Cold Move Charges-Foreign</li>
+<li>Penal Berth Charges-Coastal</li>
+<li>Penal Berth Charges-Foreign</li>
+<li>Pilot Cancel Charges-Coastal</li>
+<li>Pilot Cancel Charges-Foreign</li>
+<li>Pilot Detention Charges-Coastal</li>
+<li>Pilot Detention Charges-Foreign</li>
+<li>PILOT LAUNCH</li>
+<li>Pilotage Charges Ambuja-Coastal</li>
+<li>Pilotage Charges ONGC-Coastal</li>
+<li>Pilotage Fee-Coastal</li>
+<li>Pilotage Fee-Foreign</li>
+<li>Pilotage-Cum-Towage Fee-Coastal</li>
+<li>Pilotage-Cum-Towage Fee-Foreign</li>
+<li>Port Dues Ambuja-Coastal</li>
+<li>Port Dues Container-Foreign-No Cargo-OPS</li>
+<li>Port Dues Offshore-Foreign-No Cargo-OPS</li>
+<li>Port Dues ONGC-Coastal</li>
+<li>Port Dues Other-Foreign-No Cargo-OPS</li>
+<li>Port Dues-Bulk-Coastal</li>
+<li>Port Dues-Bulk-Coastal-Inballast</li>
+<li>Port Dues-Bulk-Coastal-No Cargo-OPS</li>
+<li>Port Dues-Bulk-Foreign</li>
+<li>Port Dues-Bulk-Foreign-Inballast</li>
+<li>Port Dues-Bulk-Foreign-No Cargo-OPS</li>
+<li>Port Dues-Car-Coastal</li>
+<li>Port Dues-Car-Coastal-Inballast</li>
+<li>Port Dues-Car-Coastal-No Cargo-OPS</li>
+<li>Port Dues-Car-Foreign</li>
+<li>Port Dues-Car-Foreign-Inballast</li>
+<li>Port Dues-Car-Foreign-No Cargo-OPS</li>
+<li>Port Dues-Container-Coastal</li>
+<li>Port Dues-Container-Coastal-Inballast</li>
+<li>Port Dues-Container-Coastal-No Cargo-OPS</li>
+<li>Port Dues-Container-Foreign</li>
+<li>Port Dues-Container-Foreign-Inballast</li>
+<li>Port Dues-Offshore-Coastal</li>
+<li>Port Dues-Offshore-Coastal-Inballast</li>
+<li>Port Dues-Offshore-Coastal-No Cargo-OPS</li>
+<li>Port Dues-Offshore-Foreign</li>
+<li>Port Dues-Offshore-Foreign-Inballast</li>
+<li>Port Dues-Other-Coastal</li>
+<li>Port Dues-Other-Coastal-Inballast</li>
+<li>Port Dues-Other-Coastal-No Cargo-OPS</li>
+<li>Port Dues-Other-Foreign</li>
+<li>Port Dues-Other-Foreign-Inballast</li>
+<li>Priority Berth Hire Charges-Normal-Coastal</li>
+<li>Priority Berth Hire Charges-Normal-Foreign</li>
+<li>Priority Berth Hire Charges-Ousting-Coastal</li>
+<li>Priority Berth Hire Charges-Ousting-Foreign</li>
+<li>SEAFARERS CLUB CHARGES</li>
+<li>Shallow Water Berth Hire Charges-Coastal</li>
+<li>Shallow Water Berth Hire Charges-Foreign</li>
+<li>Shifting Outside Terminal Cold Move Coastal</li>
+<li>Shifting Outside Terminal Cold Move Foreign</li>
+<li>Shifting Outside Terminal-Coastal</li>
+<li>Shifting Outside Terminal-Foreign</li>
+<li>Shifting Within Terminal Cold Move Costal</li>
+<li>Shifting Within Terminal Cold Move Foreign</li>
+<li>Shifting Within Terminal-Coastal</li>
+<li>Shifting Within Terminal-Foreign</li>
+<li>VIA Cancellation Charges-Coastal</li>
+<li>VIA Cancellation Charges-Foreign</li>
+
+</ul>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+<div class="card">
+
+<div class="header">
+<div class="title">Tariff Heads</div>
+<div>
+<button class="btn btn-add">+ Add</button>
+<button class="btn btn-edit">Edit</button>
+<button class="btn btn-download">Download</button>
+<button class="btn btn-exit" onclick="window.location.href='masters.html'">Exit</button>
+</div>
+</div>
+
+<div class="form-grid">
+
+<div>
+<label><span class="required">*</span>Bill Type</label>
+<select><option>Marine</option></select>
+</div>
+
+<div>
+<label>Category</label>
+<select><option>TOWAGE</option></select>
+</div>
+
+<div>
+<label><span class="required">*</span>Tariff Code</label>
+<input value="TUG003">
+</div>
+
+<div>
+<label><span class="required">*</span>Tariff Name</label>
+<input value="Additional TugBoat Hire - Sixty Ton">
+</div>
+
+<div>
+<label>Print Title</label>
+<input>
+</div>
+
+<div>
+<label>Units</label>
+<input>
+</div>
+
+<div>
+<label><span class="required">*</span>Finance Ledger Code</label>
+<input value="340909">
+</div>
+
+<div>
+<label><span class="required">*</span>Activity Type</label>
+<select><option>Unit Based</option></select>
+</div>
+
+<div>
+<label>Sequence</label>
+<input value="1">
+</div>
+
+<div>
+<label><span class="required">*</span>Shift Applicable</label>
+<select><option>Applicable to All</option></select>
+</div>
+
+<div>
+<label><span class="required">*</span>GST Applicable To</label>
+<select><option>BU</option></select>
+</div>
+
+<div>
+<label>Profit Centre</label>
+<input value="5390">
+</div>
+
+<div>
+<label>SAC Code</label>
+<input value="996752">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll("#tariffList li").forEach(item=>{
+    item.addEventListener("click",function(){
+        document.querySelectorAll("#tariffList li").forEach(li=>li.classList.remove("active"));
+        this.classList.add("active");
+    });
+});
+</script>
+
+</body>
+</html>

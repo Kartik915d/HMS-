@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HMS - Customer Registration</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#eef2f7,#d9e4f5);
+}
+.container{
+    max-width:1450px;
+    margin:25px auto;
+    padding:30px;
+}
+.card{
+    background:#ffffffee;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.title{
+    font-size:22px;
+    font-weight:600;
+}
+.btn{
+    padding:7px 14px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:13px;
+}
+.btn-primary{background:#2d62ed;color:#fff;}
+.btn-secondary{background:#7c8aa5;color:#fff;}
+.btn-upload{background:#2f6edb;color:#fff;}
+.btn-exit{background:#e5532d;color:#fff;}
+.section{
+    margin-top:25px;
+}
+.section h3{
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:6px;
+    font-size:15px;
+    color:#2c3e50;
+}
+.grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px 35px;
+}
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px 30px;
+}
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+label{
+    font-size:13px;
+    margin-bottom:5px;
+}
+input,select{
+    padding:8px;
+    border-radius:6px;
+    border:1px solid #ccd6e4;
+    font-size:14px;
+}
+.upload-row{
+    display:flex;
+    gap:8px;
+    align-items:center;
+}
+.required{color:red;}
+.table-header{
+    margin-top:10px;
+    background:#7c8aa5;
+    color:white;
+    padding:8px;
+    border-radius:5px;
+    font-size:13px;
+}
+.footer-buttons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+.tabs{
+    display:flex;
+    gap:10px;
+    margin:15px 0;
+}
+.tab{
+    padding:8px 20px;
+    background:#d9dee7;
+    border-radius:6px;
+    cursor:pointer;
+}
+.tab.active{
+    background:#2d2c54;
+    color:#fff;
+}
+.declaration{
+    font-size:13px;
+    line-height:1.6;
+}
+@media(max-width:1000px){
+    .grid-2,.grid-3{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="card">
+
+<div class="header">
+<div class="title">Customer Registration</div>
+<button class="btn btn-exit" onclick="window.location.href='masters.html'">Exit</button>
+</div>
+
+<div class="section">
+<label>Status of Application:</label>
+</div>
+
+<div class="tabs">
+<div class="tab active">Importer</div>
+<div class="tab">Shipping Line</div>
+</div>
+
+<!-- COMPANY DETAILS -->
+<div class="section">
+<h3>Company Details</h3>
+
+<div class="grid-2">
+
+<div class="form-group">
+<label><span class="required">*</span>Name of Company</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Company Reg. Date</label>
+<input type="date">
+</div>
+
+<div class="form-group">
+<label><span class="required">*</span>PAN No</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>TAN No</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Applicant category</label>
+<div>
+<input type="radio"> Registered Company / LLP
+<input type="radio"> Partnership firm
+<input type="radio"> Proprietary firm
+</div>
+</div>
+
+<div class="form-group">
+<label>Note</label>
+<input type="text">
+</div>
+
+</div>
+
+<!-- DOCUMENTS -->
+<div class="grid-2">
+
+<div class="upload-row">
+<label><span class="required">*</span>Certificate of incorporation</label>
+<input type="file">
+<button class="btn btn-upload">Upload</button>
+<button class="btn btn-secondary">Download</button>
+</div>
+
+<div class="upload-row">
+<label><span class="required">*</span>Company PAN Card</label>
+<input type="file">
+<button class="btn btn-upload">Upload</button>
+<button class="btn btn-secondary">Download</button>
+</div>
+
+<div class="upload-row">
+<label><span class="required">*</span>DPD Permission</label>
+<input type="file">
+<button class="btn btn-upload">Upload</button>
+<button class="btn btn-secondary">Download</button>
+</div>
+
+<div class="upload-row">
+<label><span class="required">*</span>GST Certificate</label>
+<input type="file">
+<button class="btn btn-upload">Upload</button>
+<button class="btn btn-secondary">Download</button>
+</div>
+
+</div>
+
+<div class="grid-2">
+
+<div class="form-group">
+<label><span class="required">*</span>GST No</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label><span class="required">*</span>Pin Code</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Registration No</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Registration Place</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label><span class="required">*</span>State</label>
+<select><option>Select State</option></select>
+</div>
+
+<div class="form-group">
+<label><span class="required">*</span>City</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label><span class="required">*</span>Correspondence Address</label>
+<input type="text" placeholder="Address 1">
+<input type="text" placeholder="Address 2">
+<input type="text" placeholder="Address 3">
+</div>
+
+<div class="form-group">
+<label><span class="required">*</span>Phone No</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Fax No</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label><span class="required">*</span>Email ID</label>
+<input type="email">
+</div>
+
+</div>
+</div>
+
+<!-- OFFICIAL DETAILS -->
+<div class="section">
+<h3>Details of Official of Importer</h3>
+<div class="grid-2">
+<div class="form-group"><label>*Name of Person</label><input></div>
+<div class="form-group"><label>Name of Person</label><input></div>
+<div class="form-group"><label>*Designation</label><input></div>
+<div class="form-group"><label>Designation</label><input></div>
+<div class="form-group"><label>*Direct Contact No</label><input></div>
+<div class="form-group"><label>Direct Contact No</label><input></div>
+<div class="form-group"><label>*Email Id</label><input></div>
+<div class="form-group"><label>Email Id</label><input></div>
+</div>
+</div>
+
+<!-- FINANCE -->
+<div class="section">
+<h3>(B) Finance</h3>
+<div class="grid-2">
+<div class="form-group"><label>*Name of Person</label><input></div>
+<div class="form-group"><label>Name of Person</label><input></div>
+<div class="form-group"><label>*Designation</label><input></div>
+<div class="form-group"><label>Designation</label><input></div>
+<div class="form-group"><label>*Direct Contact No</label><input></div>
+<div class="form-group"><label>Direct Contact No</label><input></div>
+<div class="form-group"><label>*Email Id</label><input></div>
+<div class="form-group"><label>Email Id</label><input></div>
+</div>
+</div>
+
+<!-- OTHER DETAILS -->
+<div class="section">
+<h3>Other Details</h3>
+
+<div class="grid-2">
+<div class="form-group">
+<label>*I.E.C. Code</label>
+<input>
+</div>
+
+<div class="upload-row">
+<label>*I.E.C. Documents</label>
+<input type="file">
+<button class="btn btn-upload">Upload</button>
+<button class="btn btn-secondary">Download</button>
+</div>
+
+<div class="form-group">
+<label>Average volume of imports per month in containers</label>
+<input>
+</div>
+</div>
+
+<h3>State Wise Details For GST</h3>
+<div class="table-header">
+State Name | State Code | Date of Registration | Provisional GSTIN/UIN | Registered Address | PIN code | Upload Certificate
+</div>
+
+</div>
+
+<!-- DECLARATION -->
+<div class="section">
+<h3>Declaration</h3>
+<div class="declaration">
+i. Self-attested copy of permission issued by Jawahar Customs. <br>
+ii. Self-attested copy of PAN Card. <br>
+iii. Self-attested copy of GSTN. <br><br>
+Kindly provide the Email Id to send the OTP after click on OTP request button.
+</div>
+
+<div class="grid-2">
+<div class="form-group">
+<label>Email Id</label>
+<input id="otpEmail">
+</div>
+<div style="align-self:end;">
+<button class="btn btn-secondary" onclick="alert('OTP Sent (Demo)')">OTP Request</button>
+</div>
+
+<div class="form-group">
+<label>Enter OTP No</label>
+<input>
+</div>
+</div>
+
+<div>
+<input type="checkbox"> I accept*
+</div>
+
+<div class="grid-3">
+<div class="form-group"><label>*Name</label><input></div>
+<div class="form-group"><label>*Place</label><input></div>
+<div class="form-group"><label>*Designation</label><input></div>
+</div>
+
+<div class="footer-buttons">
+<button class="btn btn-primary" onclick="alert('Submitted Successfully')">Submit</button>
+<button class="btn btn-secondary" onclick="location.reload()">Reset</button>
+</div>
+
+</div>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HMS - Tariff Contract Configuration</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #d9e4f5);
+}
+
+.page-container {
+    max-width: 1350px;
+    margin: 35px auto;
+    padding: 30px;
+}
+
+.module-card {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.module-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1c2b4a;
+}
+
+.button-group-top {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-add { background: #6c7a89; color: white; }
+.btn-search { background: #2d62ed; color: white; }
+.btn-exit { background: #e5532d; color: white; }
+
+button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.form-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+.left-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 30px;
+}
+
+.right-section {
+    display: grid;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #344767;
+}
+
+input, select {
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: 1px solid #d0d7e2;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #2d62ed;
+    box-shadow: 0 0 0 2px rgba(45,98,237,0.1);
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.section-divider {
+    margin: 30px 0 15px 0;
+    background: #4f6280;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.billable-box {
+    height: 180px;
+    border-radius: 10px;
+    border: 1px dashed #c2cbd8;
+    background: #f8faff;
+}
+
+.required {
+    color: red;
+    font-weight: 600;
+}
+
+@media(max-width:1000px){
+    .form-section {
+        grid-template-columns: 1fr;
+    }
+    .left-section {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page-container">
+<div class="module-card">
+
+    <div class="module-header">
+        <div class="module-title">Tariff Contract Configuration</div>
+        <div class="button-group-top">
+            <button class="btn-add" onclick="addContract()">+ Add</button>
+            <button class="btn-search" onclick="searchContract()">🔍 Search</button>
+            <button class="btn btn-exit" onclick="window.location.href='masters.html'">Exit</button>
+
+        </div>
+    </div>
+
+    <div class="form-section">
+
+        <!-- LEFT -->
+        <div class="left-section">
+
+            <div class="form-group">
+                <label>Status</label>
+                <select id="status">
+                    <option value="">Select</option>
+                    <option>Active</option>
+                    <option>Inactive</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Contract Ref No</label>
+                <input type="text" id="refNo">
+            </div>
+
+            <div class="form-group full-width">
+                <label><span class="required">*</span> Contract Name</label>
+                <input type="text" id="contractName">
+            </div>
+
+            <div class="form-group">
+                <label><span class="required">*</span> Contract Period From Date</label>
+                <input type="date" id="fromDate">
+            </div>
+
+            <div class="form-group">
+                <label><span class="required">*</span> To Date</label>
+                <input type="date" id="toDate">
+            </div>
+
+            <div class="form-group full-width">
+                <label>Apply Rates Of</label>
+                <input type="text" id="applyRates">
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right-section">
+
+            <div class="form-group">
+                <label>General Contract</label>
+                <select>
+                    <option>Select</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Customer</label>
+                <input type="text">
+            </div>
+
+            <div class="form-group">
+                <label>Quay</label>
+                <input type="text">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="section-divider">Billable Heads</div>
+    <div class="billable-box"></div>
+
+</div>
+</div>
+
+<script>
+function addContract() {
+    let name = document.getElementById("contractName").value;
+    let from = document.getElementById("fromDate").value;
+    let to = document.getElementById("toDate").value;
+
+    if(name === "" || from === "" || to === ""){
+        alert("Please fill all mandatory fields.");
+        return;
+    }
+
+    alert("Tariff Contract Added Successfully!");
+}
+
+function searchContract() {
+    let ref = document.getElementById("refNo").value;
+    if(ref === ""){
+        alert("Enter Contract Ref No to search.");
+    } else {
+        alert("Searching for Contract Ref No: " + ref);
+    }
+}
+
+function exitPage() {
+    if(confirm("Are you sure you want to exit?")){
+        window.location.href = "dashboard.html"; 
+    }
+}
+</script>
+
+</body>
+</html>

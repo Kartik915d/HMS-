@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HMS - Tariff Contract Approval</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#eef2f7,#d9e4f5);
+}
+
+.container{
+    max-width:1400px;
+    margin:25px auto;
+    padding:25px;
+}
+
+.card{
+    background:#ffffffee;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.title{
+    font-size:20px;
+    font-weight:600;
+}
+
+.btn{
+    padding:6px 14px;
+    border:none;
+    border-radius:5px;
+    font-size:13px;
+    cursor:pointer;
+}
+
+.btn-search{background:#2d62ed;color:#fff;}
+.btn-exit{background:#e5532d;color:#fff;}
+
+.btn:hover{opacity:0.9;}
+
+.pending{
+    text-align:center;
+    font-weight:600;
+    margin:15px 0;
+}
+
+.badge{
+    background:#6b7280;
+    color:#fff;
+    padding:3px 8px;
+    border-radius:12px;
+    font-size:12px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px 40px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+input,select{
+    padding:7px;
+    border:1px solid #ccd6e4;
+    border-radius:5px;
+    font-size:13px;
+}
+
+.full-width{
+    grid-column:span 2;
+}
+
+.section-header{
+    margin-top:25px;
+    background:#5c6f8a;
+    color:white;
+    padding:8px;
+    font-size:14px;
+    border-radius:4px;
+}
+
+.billable-box{
+    height:200px;
+    background:#f8fafc;
+    border:1px solid #d1d5db;
+    border-radius:6px;
+    margin-top:10px;
+}
+
+@media(max-width:1000px){
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="card">
+
+<div class="header">
+<div class="title">Tariff Contract Configuration Approval</div>
+<div>
+<button class="btn btn-search">🔍 Search</button>
+<button class="btn btn-exit" onclick="window.location.href='masters.html'">✖ Exit</button>
+</div>
+</div>
+
+<div class="pending">
+Pending Counts: <span class="badge">25</span>
+</div>
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>Status</label>
+<select>
+<option>Select</option>
+<option>Pending</option>
+<option>Approved</option>
+<option>Rejected</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Contract Ref No</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Contract Name</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>General Contract</label>
+<select>
+<option>Select</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Contract Period From Date</label>
+<input type="date">
+</div>
+
+<div class="form-group">
+<label>To Date</label>
+<input type="date">
+</div>
+
+<div class="form-group">
+<label>Customer</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Quay</label>
+<input type="text">
+</div>
+
+<div class="form-group full-width">
+<label>Apply Rates Of</label>
+<input type="text">
+</div>
+
+</div>
+
+<div class="section-header">
+Billable Heads
+</div>
+
+<div class="billable-box">
+<!-- Billable heads grid will appear here -->
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

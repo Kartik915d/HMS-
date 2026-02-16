@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HMS - Key Reference Master</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#eef2f7,#d9e4f5);
+}
+
+/* Layout */
+.wrapper{
+    display:flex;
+    height:100vh;
+}
+
+.sidebar{
+    width:300px;
+    background:#eef2f7;
+    border-right:1px solid #cbd5e1;
+    padding:15px;
+    overflow-y:auto;
+}
+
+.sidebar h3{
+    font-size:14px;
+    margin-bottom:10px;
+    background:#5c6f8a;
+    color:#fff;
+    padding:8px;
+    border-radius:4px;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.sidebar li{
+    padding:6px 8px;
+    font-size:13px;
+    cursor:pointer;
+    border-radius:4px;
+}
+
+.sidebar li:hover{
+    background:#dde5f1;
+}
+
+.sidebar li.active{
+    color:#e5532d;
+    font-weight:600;
+}
+
+/* Main */
+.main{
+    flex:1;
+    padding:25px;
+}
+
+.card{
+    background:#ffffffee;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.title{
+    font-size:18px;
+    font-weight:600;
+}
+
+.btn{
+    padding:6px 12px;
+    border:none;
+    border-radius:5px;
+    font-size:12px;
+    cursor:pointer;
+}
+
+.btn-add{background:#7c8aa5;color:#fff;}
+.btn-exit{background:#e5532d;color:#fff;}
+.btn-blue{background:#2d62ed;color:#fff;}
+
+.btn:hover{opacity:0.9;}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+label{
+    font-size:13px;
+}
+
+input{
+    padding:6px;
+    border:1px solid #ccd6e4;
+    border-radius:5px;
+    font-size:13px;
+}
+
+/* Table */
+.table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+.table th{
+    background:#7c8aa5;
+    color:white;
+    font-size:13px;
+    padding:8px;
+    text-align:left;
+}
+
+.table td{
+    border:1px solid #e2e8f0;
+    padding:6px;
+    font-size:13px;
+}
+
+.table input{
+    width:100%;
+    border:1px solid #ccd6e4;
+    border-radius:4px;
+    padding:4px;
+    font-size:12px;
+}
+
+.action-btn{
+    background:#2d62ed;
+    color:#fff;
+    border:none;
+    padding:4px 8px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+.default-col{
+    text-align:center;
+}
+
+.footer{
+    position:absolute;
+    bottom:5px;
+    right:15px;
+    font-size:11px;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- LEFT SIDEBAR -->
+<div class="sidebar">
+<h3>Group Code List</h3>
+<ul id="groupList">
+
+<li class="active">ACTIVITYTYPE</li>
+<li>BERTH_OCCUPANCY_LENGTH</li>
+<li>BILLTYPE</li>
+<li>BILLINGCYCLE</li>
+<li>BIRTHSTS</li>
+<li>BSHIFT</li>
+<li>CALCFACTORJOB</li>
+<li>CALCFACTORVESSEL</li>
+<li>CALCULATION_BASE</li>
+<li>CALCULATIONFACTOR</li>
+<li>CARGOTYPE</li>
+<li>COLDMOVE</li>
+<li>CREDITNOTE</li>
+<li>CURRENCY</li>
+<li>CUSTOMERTYPE</li>
+<li>DELAYTYPE</li>
+<li>DEPARTMENT</li>
+<li>DESIGNATION</li>
+<li>EVENTS</li>
+<li>FLATCUMULATIVE</li>
+<li>FROMACCOUNT</li>
+<li>GRADE</li>
+<li>GSTAPPLICABLE</li>
+<li>INVOICEFOR</li>
+<li>INVOICETYPE</li>
+<li>JOB FOR</li>
+<li>JOB TYPE</li>
+<li>JOBACTIVITY</li>
+<li>JOBACTIVITYTYPE</li>
+<li>JOBQTYVALUE</li>
+<li>JOBTIMEVALUE</li>
+<li>KPIEASON</li>
+<li>LBTCHA</li>
+<li>LBTCONSIGNEEMASTER</li>
+<li>MARI</li>
+<li>MOVETYPE</li>
+<li>ORGANISATIONNAME</li>
+<li>PAYMENTTYPE</li>
+<li>PBERTH</li>
+<li>PHASE</li>
+<li>PILOT GRADE</li>
+<li>PILOTBOARDINGPLACE</li>
+<li>RESOURCETYPE</li>
+<li>SEQUENCEREF</li>
+<li>SERVICE TYPE</li>
+<li>SERVICESAVAILABLE</li>
+<li>SHIFTAPPLICABLE</li>
+<li>SHIPTYPE</li>
+<li>SIDE</li>
+<li>STORAGEJOB</li>
+<li>STORAGEVESSEL</li>
+<li>TBOATTYPE</li>
+<li>TDSTYPE</li>
+<li>TERMINAL</li>
+<li>TERMINALTYPE</li>
+<li>TIMESLICE</li>
+<li>TOACCOUNT</li>
+<li>TOBANK</li>
+<li>TRADE</li>
+<li>TYPEOFHEAD</li>
+<li>UNAVAILABILITYTYPE</li>
+<li>VESSELCATEGORY</li>
+<li>VHFCHN</li>
+</ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+<div class="card">
+
+<div class="header">
+<div class="title">Key References</div>
+<div>
+<button class="btn btn-add">+ Add</button>
+<button class="btn btn-exit" onclick="window.location.href='masters.html'">Exit</button>
+</div>
+</div>
+
+<div class="form-group">
+<label><span style="color:red">*</span> Group Code:</label>
+<input type="text" value="ACTIVITYTYPE" id="groupCode">
+</div>
+
+<table class="table" id="refTable">
+<thead>
+<tr>
+<th>Sequence No</th>
+<th><span style="color:red">*</span> Head Code Value</th>
+<th><span style="color:red">*</span> Head Code Description</th>
+<th>Default</th>
+<th>
+<button class="btn-blue btn" onclick="addRow()">+</button>
+</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><input value="1"></td>
+<td><input value="STORAGE BASED"></td>
+<td><input value="Storage Based"></td>
+<td class="default-col"><input type="checkbox" checked></td>
+<td><button class="action-btn">✎</button></td>
+</tr>
+
+<tr>
+<td><input value="2"></td>
+<td><input value="UNIT BASED"></td>
+<td><input value="Unit Based"></td>
+<td class="default-col"><input type="checkbox"></td>
+<td><button class="action-btn">✎</button></td>
+</tr>
+
+<tr>
+<td><input value="3"></td>
+<td><input value="WEIGHT BASED"></td>
+<td><input value="Weight Based"></td>
+<td class="default-col"><input type="checkbox"></td>
+<td><button class="action-btn">✎</button></td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+<div class="footer">
+Copyright © 2022 V&V Comptech Systems Pvt Ltd.
+</div>
+
+</div>
+</div>
+
+<script>
+
+/* Sidebar active selection */
+document.querySelectorAll("#groupList li").forEach(item=>{
+    item.addEventListener("click",function(){
+        document.querySelectorAll("#groupList li").forEach(li=>li.classList.remove("active"));
+        this.classList.add("active");
+        document.getElementById("groupCode").value=this.innerText;
+    });
+});
+
+/* Add new row */
+function addRow(){
+    let table=document.getElementById("refTable").getElementsByTagName('tbody')[0];
+    let rowCount=table.rows.length+1;
+
+    let row=table.insertRow();
+    row.innerHTML=`
+        <td><input value="${rowCount}"></td>
+        <td><input></td>
+        <td><input></td>
+        <td class="default-col"><input type="checkbox"></td>
+        <td><button class="action-btn">✎</button></td>
+    `;
+}
+
+</script>
+
+</body>
+</html>
